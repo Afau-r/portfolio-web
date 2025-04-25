@@ -1,0 +1,74 @@
+/* src/components/Skills.css */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .skill-group {
+    background-color: #1a1a1c;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-category {
+    color: #00e0ff;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .category-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    margin-bottom: 0.8rem;
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+  }
+  
+  .skill-name {
+    color: #f1f1f1;
+  }
+  
+  .skill-level {
+    color: #00e0ff;
+    font-size: 0.9rem;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #2a2a2c;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00e0ff, #00a0ff);
+    border-radius: 4px;
+    transition: width 1s ease-out;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+  }

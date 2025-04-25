@@ -1,0 +1,141 @@
+/* src/components/AboutMe.css */
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .about-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1c;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-image {
+    margin-bottom: 1.5rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00e0ff;
+  }
+  
+  .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00c3ff, #0062ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .profile-detail-item {
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .profile-detail-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .profile-detail-item strong {
+    color: #00e0ff;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  
+  .profile-detail-item span {
+    display: block;
+    color: #f1f1f1;
+  }
+  
+  .timeline-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #00e0ff;
+    margin: 2rem 0 1rem;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    width: 2px;
+    background-color: #00e0ff;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -2rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #00e0ff;
+    border: 2px solid #0e0e10;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    background-color: #1a1a1c;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-content h4 {
+    margin-top: 0;
+    color: #ffffff;
+  }
+  
+  .timeline-place {
+    color: #00e0ff;
+    margin: 0.3rem 0;
+    font-weight: 500;
+  }
+  
+  .timeline-date {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  }

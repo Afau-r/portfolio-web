@@ -1,0 +1,89 @@
+/* src/components/Projects.css */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background-color: #1a1a1c;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: calc(0.1s * var(--i, 1));
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 224, 255, 0.2);
+}
+
+.project-card.expanded {
+  grid-column: span 2;
+  transform: scale(1.02);
+  }
+  
+  .project-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-card h3 {
+    color: #00e0ff;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-description {
+    color: #cccccc;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  .tech-badge {
+    background-color: rgba(0, 224, 255, 0.1);
+    color: #00e0ff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  .project-tech {
+    margin-bottom: 1rem;
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .project-links a {
+    color: #00e0ff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .project-links a:hover {
+    color: #ffffff;
+  }
+  
+  @media (max-width: 768px) {
+    .project-card.expanded {
+      grid-column: auto;
+    }
+  }

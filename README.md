@@ -6,9 +6,9 @@
 
 - React + Vite
 - JavaScript
-- CSS moderno (dark theme)
+- CSS 
 - React Icons
-- Despliegue en GitHub Pages / Netlify
+- Despliegue en GitHub Pages 
 
 ## 🧠 Contenido
 

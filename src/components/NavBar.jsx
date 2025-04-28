@@ -44,7 +44,7 @@ const NavBar = () => {
           <a href="#skills" onClick={closeMenu}>Habilidades</a>
           <a href="#contact" onClick={closeMenu}>Contacto</a>
           <a 
-            href="/portfolio-web/public/CV_AlexFauRidao.pdf" 
+            href="/portfolio-web/CV_AlexFauRidao.pdf" 
             target="_blank" 
             rel="noreferrer" 
             className="cv-button"

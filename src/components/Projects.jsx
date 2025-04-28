@@ -10,7 +10,7 @@ const Projects = () => {
       title: "Predicción inmobiliaria (Dubái)",
       description: "Análisis con Python para detectar zonas de alta rentabilidad utilizando regresión y visualización de datos geoespaciales.",
       technologies: ["Python", "Pandas", "Scikit-learn"],
-      image: "/public/growth_opportunities.png", // Añade imágenes reales de tus proyectos
+      image: "/portfolio-web/public/growth_opportunities.png", // Añade imágenes reales de tus proyectos
       github: "https://github.com/Afau-r/Projects",
       icon: "🏙️"
     },
@@ -19,7 +19,7 @@ const Projects = () => {
       title: "Forecasting de demanda (Cruzber)",
       description: "Pipeline completo desde la limpieza hasta la modelización con series temporales. Mejora en la precisión de predicción del 25%.",
       technologies: ["Python", "Prophet", "SARIMA", "Tableau"],
-      // image: "/public/images/forecasting-project.jpg",
+      // image: "/portfolio-web/public/images/forecasting-project.jpg",
       github: "https://github.com/Afau-r/Projects",
       icon: "📦"
     },
@@ -28,7 +28,7 @@ const Projects = () => {
       title: "Clustering e-commerce",
       description: "K-Means para segmentar clientes y personalizar estrategias de marketing, implementado en una plataforma de e-commerce.",
       technologies: ["Python", "Scikit-learn", "K-Means", "Matplotlib"],
-      image: "/public/rfm_3d_clusters.png",
+      image: "/portfolio-web/public/rfm_3d_clusters.png",
       github: "https://github.com/Afau-r/Projects",
       icon: "🛍️"
     },
@@ -37,7 +37,7 @@ const Projects = () => {
       title: "Dashboard de bienestar",
       description: "Visualización con Tableau para monitorear la salud organizacional con KPIs de recursos humanos y satisfacción laboral.",
       technologies: ["Tableau", "SQL", "Excel"],
-      image: "/public/dashboard_bienestar.pdf",
+      image: "/portfolio-web/public/dashboard_bienestar.pdf",
       github: "https://github.com/Afau-r/Projects",
       icon: "📊"
     }
@@ -78,7 +78,7 @@ const Projects = () => {
               {project.id === 2 ? (
                 <span>En progreso</span>
               ) : project.id === 4 ? (
-                <a href="/public/Dashboard_de_Bienestar.twbx" download>
+                <a href="/portfolio-web/public/Dashboard_de_Bienestar.twbx" download>
                   Descargar Dashboard
                 </a>
               ) : (

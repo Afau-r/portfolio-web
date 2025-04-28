@@ -8,7 +8,7 @@
 - JavaScript
 - CSS 
 - React Icons
-- Despliegue en GitHub Pages / Netlify
+- Despliegue en GitHub Pages 
 
 ## 🧠 Contenido
 

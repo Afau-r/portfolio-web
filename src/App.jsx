@@ -1,8 +1,6 @@
 // Estructura base del proyecto React + estilo tech oscuro
 // Archivos que debes crear dentro de src/
 // Para iniciar el archivo en la terminal 'bash':
-// cd "C:\Users\alexf\OneDrive\Documentos\DATA ANALYTICS\Portafolio\portfolio-web"
-// npm run dev
 // para subir a internet: npm run build - '/dist' 
 
 // 1. src/App.jsx

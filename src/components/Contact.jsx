@@ -1,6 +1,6 @@
 // 5. src/components/Contact.jsx
 import React, { useState } from "react";
-import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane, FaSpinner } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
 import "./Contact.css";
 
 const Contact = () => {
@@ -10,9 +10,6 @@ const Contact = () => {
     subject: "",
     message: ""
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState(null);
   
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,29 +21,15 @@ const Contact = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulación de envío - En producción reemplazar con una llamada a API real
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage({
-        type: "success",
-        text: "¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto."
-      });
-      
-      // Resetear formulario
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
-      
-      // Limpiar mensaje después de 5 segundos
-      setTimeout(() => {
-        setSubmitMessage(null);
-      }, 5000);
-    }, 1500);
+    // Crear el enlace mailto con los datos del formulario
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Mensaje de: ${formData.name}\nEmail de contacto: ${formData.email}\n\n${formData.message}`
+    );
+    
+    // Abrir el cliente de correo del usuario
+    window.location.href = `mailto:afau2000@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -137,23 +120,9 @@ const Contact = () => {
                 required 
               ></textarea>
             </div>
-
-            {submitMessage && (
-              <div className={`submit-message ${submitMessage.type}`}>
-                {submitMessage.text}
-              </div>
-            )}
             
-            <button type="submit" className="submit-button" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <FaSpinner className="spinner" /> Enviando...
-                </>
-              ) : (
-                <>
-                  <FaPaperPlane /> Enviar mensaje
-                </>
-              )}
+            <button type="submit" className="submit-button">
+              <FaPaperPlane /> Enviar mensaje
             </button>
           </form>
         </div>

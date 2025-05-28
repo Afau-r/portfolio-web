@@ -1,6 +1,6 @@
 // src/components/NavBar.jsx
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -50,7 +50,7 @@ const NavBar = () => {
             className="cv-button"
             onClick={closeMenu}
           >
-            Descargar CV
+            <FaDownload style={{ marginRight: '8px' }} /> Descargar CV
           </a>
         </div>
       </div>

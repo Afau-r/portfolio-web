@@ -5,32 +5,33 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 1rem 0;
-    transition: all 0.3s ease;
+    padding: 1.2rem 0; /* Aumentar padding vertical */
+    transition: all 0.3s ease-in-out;
     background-color: transparent;
   }
   
   .navbar-scrolled {
-    background-color: rgba(14, 14, 16, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 224, 255, 0.1);
-    padding: 0.7rem 0;
+    background-color: rgba(14, 14, 16, 0.9); /* Un poco más de opacidad y blur */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 224, 255, 0.08); /* Sombra */
+    padding: 0.8rem 0;
   }
   
   .navbar-content {
-    max-width: 900px;
+    max-width: 900px; 
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 2rem; 
   }
   
   .navbar-logo a {
-    color: #00e0ff;
-    font-size: 1.8rem;
-    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.8rem; 
+    font-weight: 700; 
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
   }
   
   .navbar-logo a:hover {
@@ -39,68 +40,113 @@
   
   .navbar-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.8rem; 
     align-items: center;
   }
   
   .navbar-links a {
-    color: #f1f1f1;
+    color: var(--text-color); /* Usar variable */
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    position: relative; 
+    padding: 0.3rem 0; /* Pequeño padding para que el subrayado no quede pegado */
   }
   
   .navbar-links a:hover {
-    color: #00e0ff;
+    color: var(--primary-color);
+  }
+
+  .navbar-links a.active {
+    color: var(--primary-color);
+    font-weight: 600; 
+  }
+
+  .navbar-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  @keyframes slideIn {
+    from { width: 0; }
+    to { width: 100%; }
   }
   
   .cv-button {
-    background-color: #00e0ff;
-    color: #0e0e10 !important;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--bg-color) !important; /* Usar variable y !important si es necesario */
+    padding: 0.6rem 1.2rem; 
+    border-radius: 5px; /* Bordes */
+    font-weight: 600; 
     transition: all 0.3s ease;
+    display: flex; /* Para alinear icono y texto */
+    align-items: center;
   }
   
   .cv-button:hover {
     background-color: #ffffff;
-    transform: scale(1.05);
+    color: var(--bg-color) !important;
+    transform: translateY(-2px) scale(1.03); 
+    box-shadow: 0 4px 12px rgba(0, 224, 255, 0.2);
   }
   
   .navbar-toggle {
     display: none;
-    color: #00e0ff;
-    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.8rem; 
     cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .navbar-toggle:hover {
+    transform: scale(1.1);
   }
   
   @media (max-width: 768px) {
+    .navbar-content {
+      padding: 0 1.5rem; /* Ajuste para móvil */
+    }
     .navbar-toggle {
       display: block;
+      z-index: 1001; 
     }
   
     .navbar-links {
       position: fixed;
       top: 0;
-      right: -100%;
-      width: 70%;
+      right: -100%; /* Inicia oculto */
+      width: min(75%, 300px); /* Ancho responsivo, máximo 300px */
       height: 100vh;
-      background-color: #1a1a1c;
+      background-color: var(--card-bg); /* Usar variable */
       flex-direction: column;
-      align-items: flex-start;
-      padding: 5rem 2rem;
-      gap: 2rem;
-      transition: right 0.3s ease;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+      align-items: center; 
+      justify-content: center; 
+      padding: 4rem 2rem;
+      gap: 2.5rem; /* Más espacio entre enlaces */
+      transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transición más suave */
+      box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
     }
   
     .navbar-links.open {
-      right: 0;
+      right: 0; /* Mostrar */
     }
     
     .navbar-links a {
-      font-size: 1.2rem;
+      font-size: 1.3rem; /* Ajuste para móvil */
+    }
+
+    .navbar-links a.active::after {
+        bottom: -2px; /* Ajuste para móvil */
+    }
+
+    .cv-button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
     }
   }

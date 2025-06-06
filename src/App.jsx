@@ -1,7 +1,5 @@
 // Estructura base del proyecto React + estilo tech oscuro
 // Archivos que debes crear dentro de src/
-// Para iniciar el archivo en la terminal 'bash':
-// para subir a internet: npm run build - '/dist' 
 
 // 1. src/App.jsx
 import React, { useEffect } from "react";

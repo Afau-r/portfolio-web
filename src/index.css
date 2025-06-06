@@ -1,4 +1,21 @@
-:root {
+/* src/index.css */
+/* Se pueden mantener reseteos muy básicos si son necesarios, 
+   pero la mayoría de los estilos globales están en App.css */
+
+/* Por ejemplo, podrías mantener esto si quieres un box-sizing universal 
+   que no esté ya en App.css, aunque en tu caso App.css ya lo tiene. */
+/*
+* {
+  box-sizing: border-box;
+}
+*/
+
+/* Elimina o comenta las definiciones de :root y body de aquí 
+   si App.css ya las gestiona para evitar conflictos.
+   En tu caso, App.css ya define font-family, background-color, color para body.
+*/
+
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,31 +28,34 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
-a {
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+} */
+
+/* Los estilos de h1, a, button, etc., también deberían ser gestionados 
+   desde App.css para mantener una única fuente de verdad para tu diseño. */
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+} */
+
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -52,9 +72,9 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -65,4 +85,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

@@ -1,89 +1,150 @@
 /* src/components/Projects.css */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas más anchas */
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .project-card {
-  background-color: #1a1a1c;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--card-bg);
+  border-radius: 10px; /* Bordes */
+  padding: 1.8rem; 
+  box-shadow: var(--shadow);
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 380px; 
+  display: flex;
+  flex-direction: column;
+  opacity: 0; /* Para animación fade-in-up */
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: var(--animation-delay, 0s); 
+}
+
+.project-card:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 12px 25px rgba(0, 224, 255, 0.15); 
+}
+
+/* No es necesario .expanded por ahora si no se implementa funcionalidad de expansión especial */
+/* .project-card.expanded {
+  grid-column: span 2; 
+  transform: scale(1.02);
+} */
+
+.project-image-container {
+  width: 100%;
+  height: 180px; /* Altura fija para la imagen */
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  background-color: #2a2a2c; /* Placeholder si la imagen no carga */
+}
+
+.project-image {
+  width: 100%;
   height: 100%;
-  animation: fadeIn 0.8s ease forwards;
-  animation-delay: calc(0.1s * var(--i, 1));
+  object-fit: cover; 
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Sutil zoom en la imagen al hacer hover en la tarjeta */
+}
+
+.project-icon-placeholder {
+  font-size: 3.5rem; /* Icono más grande si no hay imagen */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  height: 180px; /* Misma altura que el contenedor de imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 224, 255, 0.05);
+  border-radius: 6px;
+}
+.project-content {
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 224, 255, 0.2);
+
+.project-card h3 {
+  color: var(--primary-color);
+  margin-top: 0; /* Sin margen superior si hay imagen/icono */
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem; /* Ligeramente más grande */
 }
 
-.project-card.expanded {
-  grid-column: span 2;
-  transform: scale(1.02);
+.project-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  flex-grow: 1; /* Empuja los links y tech hacia abajo */
+}
+
+.project-tech {
+  margin-bottom: 1.5rem; /* Más espacio antes de los links */
+  display: flex;
+  flex-wrap: wrap; /* ajustar badges */
+  gap: 0.5rem; /* Espacio entre badges */
+}
+
+.tech-badge {
+  background-color: rgba(0, 224, 255, 0.1);
+  color: var(--primary-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center; /* Alinear verticalmente los elementos de los links */
+  margin-top: auto; /* Empuja los links al final de la tarjeta */
+}
+
+.project-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* Espacio entre icono y texto del link */
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem; /* Pequeño padding */
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+}
+
+.project-status {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-right: auto; /* Empuja los otros links a la derecha */
+}
+
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Ajustes para móvil */
   }
-  
-  .project-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+  .project-card {
+    min-height: auto; /* Ajustes para móvil */
   }
-  
-  .project-card h3 {
-    color: #00e0ff;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .project-description {
-    color: #cccccc;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-  }
-  
-  .tech-badge {
-    background-color: rgba(0, 224, 255, 0.1);
-    color: #00e0ff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: inline-block;
-  }
-  
-  .project-tech {
-    margin-bottom: 1rem;
-  }
-  
-  .project-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .project-links a {
-    color: #00e0ff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.9rem;
-  }
-  
-  .project-links a:hover {
-    color: #ffffff;
-  }
-  
-  @media (max-width: 768px) {
-    .project-card.expanded {
-      grid-column: auto;
-    }
-  }
+  /* .project-card.expanded {
+    grid-column: auto;
+  } */
+}

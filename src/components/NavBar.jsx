@@ -6,49 +6,95 @@ import "./NavBar.css";
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      const isScrolled = window.scrollY > 50; // Umbral para el efecto de scroll
+      setScrolled(isScrolled);
+
+      // Determinar sección activa
+      const sections = document.querySelectorAll('section[id]');
+      let currentSection = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100; // Ajuste para que se active un poco antes
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.id;
+        }
+      });
+      setActiveSection(currentSection);
     };
 
     document.addEventListener("scroll", handleScroll);
+    handleScroll(); // Llama una vez al inicio para establecer el estado inicial
+
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, [scrolled]);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const closeMenu = () => {
+  const closeMenuAndScroll = (e, targetId) => {
+    e.preventDefault();
     setMenuOpen(false);
+    
+    // Si es un enlace a #, simplemente cierra el menú si ya está en la parte superior.
+    // O si el targetId es '#', podría ser un enlace al logo/inicio.
+    if (targetId === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection(''); // O la sección 'hero' si tienes un id para ella
+      return;
+    }
+
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop - 70; // Ajuste para la navbar fija
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+      setActiveSection(targetId.substring(1));
+    }
   };
 
+
+  const navLinks = [
+    { id: "about", text: "Sobre mí" },
+    { id: "projects", text: "Proyectos" },
+    { id: "skills", text: "Habilidades" },
+    { id: "contact", text: "Contacto" },
+  ];
+
   return (
-    <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+    <nav className={`navbar ${scrolled || menuOpen ? "navbar-scrolled" : ""}`}>
       <div className="navbar-content">
         <div className="navbar-logo">
-          <a href="#" onClick={closeMenu}>Mi Portfolio</a>
+          <a href="#" onClick={(e) => closeMenuAndScroll(e, '#')}>Mi Portfolio</a>
         </div>
         <div className="navbar-toggle" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
         <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
-          <a href="#about" onClick={closeMenu}>Sobre mí</a>
-          <a href="#projects" onClick={closeMenu}>Proyectos</a>
-          <a href="#skills" onClick={closeMenu}>Habilidades</a>
-          <a href="#contact" onClick={closeMenu}>Contacto</a>
+          {navLinks.map(link => (
+            <a 
+              key={link.id}
+              href={`#${link.id}`} 
+              onClick={(e) => closeMenuAndScroll(e, `#${link.id}`)}
+              className={activeSection === link.id ? 'active' : ''}
+            >
+              {link.text}
+            </a>
+          ))}
           <a 
-            href="./CV_AlexFauRidao.pdf" 
+            href="/CV_AlexFauRidao.pdf" // carpeta public
             target="_blank" 
-            rel="noreferrer" 
+            rel="noopener noreferrer" 
             className="cv-button"
-            onClick={closeMenu}
+            onClick={() => setMenuOpen(false)} // Cierra el menú también al hacer clic
           >
             <FaDownload style={{ marginRight: '8px' }} /> Descargar CV
           </a>

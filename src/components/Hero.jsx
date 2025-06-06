@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import React, { useEffect, useRef } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Hero.css";
 
 const Hero = () => {
@@ -9,29 +9,32 @@ const Hero = () => {
   // Efecto de partículas en el fondo
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
     let particles = [];
     let animationFrameId;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const heroSection = canvas.closest('.hero'); // Obtener el elemento .hero
+      canvas.height = heroSection ? heroSection.offsetHeight : window.innerHeight * 0.9; 
+
       createParticles();
     };
 
     const createParticles = () => {
       particles = [];
-      const particleCount = Math.min(100, Math.floor(canvas.width * canvas.height / 8000));
+      const particleCount = Math.min(100, Math.floor(canvas.width * canvas.height / 9000)); // densidad
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          radius: Math.random() * 2 + 1,
-          color: "#00e0ff",
-          speedX: Math.random() * 0.5 - 0.25,
-          speedY: Math.random() * 0.5 - 0.25,
-          opacity: Math.random() * 0.5 + 0.2
+          radius: Math.random() * 2.5 + 1, 
+          color: "#00e0ff", 
+          speedX: Math.random() * 0.4 - 0.2, 
+          speedY: Math.random() * 0.4 - 0.2,
+          opacity: Math.random() * 0.4 + 0.15 
         });
       }
     };
@@ -47,23 +50,19 @@ const Hero = () => {
         ctx.fillStyle = `rgba(0, 224, 255, ${p.opacity})`;
         ctx.fill();
         
-        // Actualizar posición
         p.x += p.speedX;
         p.y += p.speedY;
         
-        // Detectar bordes
         if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
         if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
       }
       
-      // Conectar partículas cercanas
       connectParticles();
-      
       animationFrameId = requestAnimationFrame(drawParticles);
     };
 
     const connectParticles = () => {
-      const maxDistance = 150;
+      const maxDistance = 120; // Reducir distancia para menos líneas
       
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -73,8 +72,8 @@ const Hero = () => {
           
           if (distance < maxDistance) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 224, 255, ${0.5 * (1 - distance / maxDistance)})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `rgba(0, 224, 255, ${0.3 * (1 - distance / maxDistance)})`; // Líneas más tenues
+            ctx.lineWidth = 0.3; // Líneas más finas
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
@@ -83,7 +82,6 @@ const Hero = () => {
       }
     };
 
-    // Inicializar
     resizeCanvas();
     drawParticles();
     
@@ -96,7 +94,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero"> {/* Añadir ID para target de navegación */}
       <canvas ref={canvasRef} className="hero-canvas"></canvas>
       <div className="hero-content">
         <h1 className="hero-title">
@@ -104,19 +102,21 @@ const Hero = () => {
           <span className="hero-role">Data Analyst & Scientist</span>
         </h1>
         <p className="hero-subtitle">
-          Especializado en transformar datos complejos en soluciones estratégicas.
-          Experiencia en machine learning, visualización avanzada y análisis predictivo 
-          para impulsar decisiones basadas en datos que generen valor real.
+          "Disfruto resolviendo problemas complejos utilizando el poder de los datos. 
+          Mi objetivo es ayudar a las empresas a tomar decisiones estratégicas basadas 
+          en información sólida y análisis predictivo. Con experiencia en Machine Learning 
+          y visualización avanzada, puedo transformar los datos en soluciones que impulsen 
+          el crecimiento y generen resultados reales." 
         </p>
         <div className="hero-cta">
           <a href="#projects" className="hero-button primary">Ver proyectos</a>
           <a href="#contact" className="hero-button secondary">Contacto</a>
         </div>
         <div className="hero-social">
-          <a href="https://linkedin.com/in/alex-fau-ridao" target="_blank" rel="noreferrer">
+          <a href="https://linkedin.com/in/alex-fau-ridao" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/Afau-r" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Afau-r" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
             <FaGithub />
           </a>
         </div>

@@ -26,7 +26,7 @@ const AboutMe = () => {
         <div className="about-profile">
           <div className="profile-image">
             {/* Puedes reemplazar esto con tu imagen real */}
-            <img src="/perfilcv.jpeg" alt="Descripción" className="actual-profile-image" />
+            <img src="public/perfilcv.jpeg" alt="Descripción" className="actual-profile-image" />
           </div>
           <div className="profile-details">
             {/* Nueva estructura para los detalles del perfil */}

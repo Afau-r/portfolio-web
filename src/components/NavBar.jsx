@@ -90,7 +90,7 @@ const NavBar = () => {
             </a>
           ))}
           <a 
-            href="/CV_AlexFauRidao.pdf" // carpeta public
+            href="public/CV_AlexFauRidao.pdf" // carpeta public
             target="_blank" 
             rel="noopener noreferrer" 
             className="cv-button"

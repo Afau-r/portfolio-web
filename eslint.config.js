@@ -30,7 +30,6 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': 'warn',
-      'react/prop-types': 'off', // Desactivar si no usas PropTypes
       'react/react-in-jsx-scope': 'off' // No necesario con React 17+ y el nuevo JSX transform
     }
   }

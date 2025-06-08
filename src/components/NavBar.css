@@ -51,7 +51,7 @@
     font-size: 1rem;
     transition: color 0.3s ease;
     position: relative; 
-    padding: 0.3rem 0; /* Pequeño padding para que el subrayado no quede pegado */
+    padding: 0.3rem 0.3rem; /* Pequeño padding para que el subrayado no quede pegado */
   }
   
   .navbar-links a:hover {

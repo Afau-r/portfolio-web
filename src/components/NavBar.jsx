@@ -42,8 +42,6 @@ const NavBar = () => {
     e.preventDefault();
     setMenuOpen(false);
     
-    // Si es un enlace a #, simplemente cierra el menú si ya está en la parte superior.
-    // O si el targetId es '#', podría ser un enlace al logo/inicio.
     if (targetId === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection(''); // O la sección 'hero' si tienes un id para ella
@@ -60,7 +58,6 @@ const NavBar = () => {
       setActiveSection(targetId.substring(1));
     }
   };
-
 
   const navLinks = [
     { id: "about", text: "Sobre mí" },
@@ -92,7 +89,7 @@ const NavBar = () => {
           <a 
             href="./CV_AlexFauRidao.pdf" // carpeta public
             target="_blank" 
-            rel="noopener noreferrer" 
+            rel="noreferrer" 
             className="cv-button"
             onClick={() => setMenuOpen(false)} // Cierra el menú también al hacer clic
           >

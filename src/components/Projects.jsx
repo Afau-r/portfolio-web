@@ -10,7 +10,7 @@ const Projects = () => {
       title: "Predicción inmobiliaria (Dubái)",
       description: "Análisis con Python para detectar zonas de alta rentabilidad utilizando regresión y visualización de métricas específicas.",
       technologies: ["Python", "Pandas", "Numpy", "Matplotlib"],
-      image: "public/growth_opportunities.png", 
+      image: "./growth_opportunities.png", 
       github: "https://github.com/Afau-r/Projects",
       liveDemo: null,
       // icon: "🏙️"
@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Clustering e-commerce",
       description: "K-Means para segmentar clientes y personalizar estrategias de marketing, implementado en una plataforma de e-commerce.",
       technologies: ["Python", "Scikit-learn", "K-Means", "Matplotlib", "Seaborn"],
-      image: "public/rfm_3d_clusters.png", 
+      image: "./rfm_3d_clusters.png", 
       github: "https://github.com/Afau-r/Projects",
       liveDemo: null,
       // icon: "🛍️"
@@ -41,8 +41,8 @@ const Projects = () => {
       title: "Dashboard de bienestar",
       description: "Visualización con Tableau para monitorear la salud organizacional con KPIs de recursos humanos y satisfacción laboral.",
       technologies: ["Tableau", "SQL", "Excel"],
-      image: "public/dashboard_bienestar.png",
-      downloadLink: "public/Dashboard_de_Bienestar.twbx", 
+      image: "./dashboard_bienestar.png",
+      downloadLink: "./Dashboard_de_Bienestar.twbx", 
       github: null, 
       // icon: "📊"
     },
@@ -51,7 +51,7 @@ const Projects = () => {
       title: "Detección Fuga de Empleados",
       description: "Construcción de un modelo Random Forest para identificar empleados con alto riesgo de renunciar, basado en condiciones laborales y otros factores. Permite tomar acciones preventivas.",
       technologies: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Matplotlib"],
-      image: "public/random_forest.png", 
+      image: "./random_forest.png", 
       github: "https://github.com/Afau-r/Projects", 
       liveDemo: null,
       // icon: "🧑‍💼" 

@@ -82,14 +82,15 @@
   .cv-button {
     background-color: var(--primary-color);
     color: var(--bg-color) !important; /* Usar variable y !important si es necesario */
-    padding: 0.6rem 1.2rem; 
-    border-radius: 5px; /* Bordes */
+    padding: 0.8rem 2rem; 
+    border-radius: 6px; /* Bordes */
     font-weight: 600; 
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     display: flex; /* Para alinear icono y texto */
     align-items: center;
   }
-  
+
   .cv-button:hover {
     background-color: #ffffff;
     color: var(--bg-color) !important;

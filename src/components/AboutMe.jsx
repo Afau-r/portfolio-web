@@ -10,23 +10,23 @@ const AboutMe = () => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            Soy un Data Scientist apasionado por transformar datos en insights accionables. 
+            Cuando trabajo como Data Scientist, no solo veo números: veo oportunidades para que las empresas 
+            entiendan mejor a sus clientes, optimicen sus procesos y encuentren nuevos caminos de crecimiento. 
             Mi experiencia abarca desde el análisis exploratorio hasta la implementación de 
             modelos de machine learning para resolver problemas empresariales reales.
           </p>
           <p>
-            Interesado especialmente en el impacto de la tecnología, el deporte y los videojuegos (e-sports).
-            Mi enfoque está en extraer valor de los datos y optimizar procesos para la toma de decisiones 
-            estratégicas que impulsen el crecimiento y la innovación.
+            Me impulsa un gran interés por la intersección de la tecnología con áreas 
+            como el deporte y los e-sports, explorando cómo los datos pueden optimizar 
+            el rendimiento y la estrategia. Mi enfoque se centra en extraer insights clave 
+            y traducirlos en decisiones que fomenten la eficiencia y la innovación continua.
           </p>
         </div>
         
         <div className="about-profile">
           <div className="profile-image">
             {/* Puedes reemplazar esto con tu imagen real */}
-            <div className="placeholder-image">
-              AFR
-            </div>
+            <img src="/perfil CV.jpeg" alt="Descripción" className="actual-profile-image" />
           </div>
           <div className="profile-details">
             {/* Nueva estructura para los detalles del perfil */}
@@ -36,7 +36,7 @@ const AboutMe = () => {
             </div>
             <div className="profile-detail-item">
               <strong>Educación:</strong>
-              <span>Máster en Data Analytics</span>
+              <span>Máster en Data Analytics&AI</span>
             </div>
             <div className="profile-detail-item">
               <strong>Idiomas:</strong>

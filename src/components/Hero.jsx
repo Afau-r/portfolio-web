@@ -102,11 +102,9 @@ const Hero = () => {
           <span className="hero-role">Data Analyst & Scientist</span>
         </h1>
         <p className="hero-subtitle">
-          "Disfruto resolviendo problemas complejos utilizando el poder de los datos. 
-          Mi objetivo es ayudar a las empresas a tomar decisiones estratégicas basadas 
-          en información sólida y análisis predictivo. Con experiencia en Machine Learning 
-          y visualización avanzada, puedo transformar los datos en soluciones que impulsen 
-          el crecimiento y generen resultados reales." 
+          "Creo que cada dato tiene algo que contar. 
+          Mi día a día va desde explorar patrones curiosos en datasets hasta construir modelos 
+          que ayuden a resolver problemas reales del mundo empresarial." 
         </p>
         <div className="hero-cta">
           <a href="#projects" className="hero-button primary">Ver proyectos</a>

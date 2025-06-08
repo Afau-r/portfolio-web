@@ -1,83 +1,77 @@
 /* src/components/Projects.css */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas más anchas */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .project-card {
   background-color: var(--card-bg);
-  border-radius: 10px; /* Bordes */
-  padding: 1.8rem; 
+  border-radius: 10px;
+  padding: 1.8rem;
   box-shadow: var(--shadow);
   cursor: pointer;
   position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 380px; 
+  
+  transition: transform 0.4s ease, box-shadow 0.4s ease, min-height 0.4s ease-in-out; /* Ajustada la transición para min-height */
+  min-height: 400px; 
   display: flex;
   flex-direction: column;
-  opacity: 0; /* Para animación fade-in-up */
+  opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
-  animation-delay: var(--animation-delay, 0s); 
+  animation-delay: var(--animation-delay, 0s);
 }
 
-.project-card:hover {
-  transform: translateY(-8px); 
-  box-shadow: 0 12px 25px rgba(0, 224, 255, 0.15); 
+.project-card:hover:not(.expanded) { 
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(var(--primary-color-rgb, 0, 224, 255), 0.15);
 }
-
-/* No es necesario .expanded por ahora si no se implementa funcionalidad de expansión especial */
-/* .project-card.expanded {
-  grid-column: span 2; 
-  transform: scale(1.02);
-} */
 
 .project-image-container {
   width: 100%;
-  height: 180px; /* Altura fija para la imagen */
-  overflow: hidden;
+  height: 180px;
+  overflow: hidden; 
   border-radius: 6px;
   margin-bottom: 1.5rem;
-  background-color: #2a2a2c; /* Placeholder si la imagen no carga */
+  background-color: #2a2a2c;
 }
 
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.project-card:hover .project-image {
-  transform: scale(1.05); /* Sutil zoom en la imagen al hacer hover en la tarjeta */
+.project-card:hover:not(.expanded) .project-image {
+  transform: scale(1.05);
 }
 
 .project-icon-placeholder {
-  font-size: 3.5rem; /* Icono más grande si no hay imagen */
+  font-size: 3.5rem;
   text-align: center;
   margin-bottom: 1.5rem;
   color: var(--primary-color);
-  height: 180px; /* Misma altura que el contenedor de imagen */
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 224, 255, 0.05);
+  background-color: rgba(var(--primary-color-rgb, 0, 224, 255), 0.05);
   border-radius: 6px;
 }
+
 .project-content {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-
 .project-card h3 {
   color: var(--primary-color);
-  margin-top: 0; /* Sin margen superior si hay imagen/icono */
+  margin-top: 0;
   margin-bottom: 0.8rem;
-  font-size: 1.4rem; /* Ligeramente más grande */
+  font-size: 1.4rem;
 }
 
 .project-description {
@@ -85,18 +79,17 @@
   margin-bottom: 1.2rem;
   line-height: 1.5;
   font-size: 0.95rem;
-  flex-grow: 1; /* Empuja los links y tech hacia abajo */
 }
 
 .project-tech {
-  margin-bottom: 1.5rem; /* Más espacio antes de los links */
+  margin-bottom: 1.5rem;
   display: flex;
-  flex-wrap: wrap; /* ajustar badges */
-  gap: 0.5rem; /* Espacio entre badges */
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .tech-badge {
-  background-color: rgba(0, 224, 255, 0.1);
+  background-color: rgba(var(--primary-color-rgb, 0, 224, 255), 0.1);
   color: var(--primary-color);
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
@@ -107,8 +100,8 @@
 .project-links {
   display: flex;
   gap: 1rem;
-  align-items: center; /* Alinear verticalmente los elementos de los links */
-  margin-top: auto; /* Empuja los links al final de la tarjeta */
+  align-items: center;
+  margin-top: auto; 
 }
 
 .project-links a {
@@ -116,10 +109,10 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.4rem; /* Espacio entre icono y texto del link */
+  gap: 0.4rem;
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.3rem 0.5rem; /* Pequeño padding */
+  padding: 0.3rem 0.5rem;
   border-radius: 4px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -133,18 +126,65 @@
   font-size: 0.9rem;
   color: var(--text-secondary);
   font-style: italic;
-  margin-right: auto; /* Empuja los otros links a la derecha */
+  margin-right: auto;
+}
+
+/* ESTILOS PARA LA TARJETA EXPANDIDA Y SU CONTENIDO */
+.project-card.expanded {
+  min-height: 520px; 
+  transform: scale(1.02); 
+  box-shadow: 0 18px 35px rgba(var(--primary-color-rgb, 0, 224, 255), 0.25);
+  z-index: 10; 
+  cursor: default; 
+}
+
+.project-details-expanded {
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(var(--primary-color-rgb, 0, 224, 255), 0.2);
+  opacity: 0;
+  max-height: 0; 
+  overflow: hidden; 
+  transition: opacity 0.4s 0.2s ease-out, max-height 0.4s 0.2s ease-out, margin-top 0.4s 0.2s ease-out, padding-top 0.4s 0.2s ease-out; /* Transición con delay */
+}
+
+.project-card.expanded .project-details-expanded {
+  opacity: 1;
+  max-height: 400px; 
+ 
+}
+
+.project-details-expanded h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.project-details-expanded p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
 }
 
 
+@media (max-width: 900px) { 
+  .project-card.expanded {
+    grid-column: auto; 
+  }
+}
+
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* Ajustes para móvil */
+    grid-template-columns: 1fr;
   }
   .project-card {
-    min-height: auto; /* Ajustes para móvil */
+    min-height: auto; 
   }
-  /* .project-card.expanded {
-    grid-column: auto;
-  } */
+  .project-card.expanded {
+    min-height: auto; 
+  }
+  .project-card.expanded .project-details-expanded {
+    max-height: 600px; 
+  }
 }

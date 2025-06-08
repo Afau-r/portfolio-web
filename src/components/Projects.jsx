@@ -8,53 +8,53 @@ const Projects = () => {
     {
       id: 1,
       title: "Predicción inmobiliaria (Dubái)",
-      description: "Análisis con Python para detectar zonas de alta rentabilidad utilizando regresión y visualización de datos geoespaciales.",
-      technologies: ["Python", "Pandas", "Scikit-learn", "GeoPandas"],
-      image: "/growth_opportunities.png", // public/
+      description: "Análisis con Python para detectar zonas de alta rentabilidad utilizando regresión y visualización de métricas específicas.",
+      technologies: ["Python", "Pandas", "Numpy", "Matplotlib"],
+      image: "/growth_opportunities.png", 
       github: "https://github.com/Afau-r/Projects",
       liveDemo: null,
-      icon: "🏙️"
+      // icon: "🏙️"
     },
     {
       id: 2,
       title: "Forecasting de demanda (Cruzber)",
-      description: "Pipeline completo desde la limpieza hasta la modelización con series temporales. Mejora en la precisión de predicción del 25%.",
-      technologies: ["Python", "Prophet", "SARIMA", "Statsmodels", "Tableau"],
+      description: "Optimizar la planificación de la demanda y la gestión del inventario de Cruzber, utilizando datos históricos y modelos predictivos para mejorar el servicio y reducir el stock inmovilizado.",
+      technologies: ["Python", "LGMRegressor", "MLForecast", "Arquitectura del Dato"],
       image: null, // imagen
       github: "https://github.com/Afau-r/Projects",
       liveDemo: null,
       status: "En progreso", 
-      icon: "📦"
+      // icon: "📦"
     },
     {
       id: 3,
       title: "Clustering e-commerce",
       description: "K-Means para segmentar clientes y personalizar estrategias de marketing, implementado en una plataforma de e-commerce.",
       technologies: ["Python", "Scikit-learn", "K-Means", "Matplotlib", "Seaborn"],
-      image: "/rfm_3d_clusters.png", // public/
+      image: "/rfm_3d_clusters.png", 
       github: "https://github.com/Afau-r/Projects",
       liveDemo: null,
-      icon: "🛍️"
+      // icon: "🛍️"
     },
     {
       id: 4,
       title: "Dashboard de bienestar",
       description: "Visualización con Tableau para monitorear la salud organizacional con KPIs de recursos humanos y satisfacción laboral.",
       technologies: ["Tableau", "SQL", "Excel"],
-      image: null, // usar una miniatura del PDF o un icono
-      downloadLink: "/Dashboard_de_Bienestar.twbx", // public/
+      image: "/dashboard_bienestar.png",
+      downloadLink: "/Dashboard_de_Bienestar.twbx", 
       github: null, 
-      icon: "📊"
+      // icon: "📊"
     },
     {
       id: 5,
       title: "Detección Fuga de Empleados",
       description: "Construcción de un modelo Random Forest para identificar empleados con alto riesgo de renunciar, basado en condiciones laborales y otros factores. Permite tomar acciones preventivas.",
       technologies: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Matplotlib"],
-      image: null, // imagen 
-      github: "https://github.com/Afau-r/Projects", // Enlace al proyecto
+      image: "/random_forest.png", 
+      github: "https://github.com/Afau-r/Projects", 
       liveDemo: null,
-      icon: "🧑‍💼" // Icono representativo
+      // icon: "🧑‍💼" 
     }
   ];
 
@@ -69,19 +69,20 @@ const Projects = () => {
       <h2><FaProjectDiagram /> Proyectos destacados</h2>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
-          <div 
-            key={project.id} 
+          <div
+            key={project.id}
             className={`project-card ${expandedId === project.id ? 'expanded' : ''} fade-in-up`}
-            onClick={() => toggleExpand(project.id)}
-            style={{"--animation-delay": `${index * 0.1}s`}} // Para animación escalonada
+            onClick={(e) => {
+              if (e.target.closest('a') === null) {
+                toggleExpand(project.id);
+              }
+            }}
+            style={{ "--animation-delay": `${index * 0.1}s` }}
           >
-            {project.image && (
-              <div className="project-image-container">
-                <img src={project.image} alt={project.title} className="project-image" />
-              </div>
-            )}
-            {!project.image && project.icon && (
-                <div className="project-icon-placeholder">{project.icon}</div>
+            {/* EN ESTADO COLAPSADO, NO MOSTRAMOS LA IMAGEN PRINCIPAL AQUÍ, 
+                O MOSTRAMOS UN ICONO/PLACEHOLDER PEQUEÑO SI SE DESEA */}
+            {expandedId !== project.id && project.icon && ( // Mostrar icono solo si no está expandido y hay icono
+                <div className="project-icon-placeholder-small">{project.icon || '📊'}</div>
             )}
             
             <div className="project-content">
@@ -94,20 +95,33 @@ const Projects = () => {
               </div>
             </div>
 
+            {/* Contenido expandido */}
+            <div className={`project-details-expanded ${expandedId === project.id ? 'visible' : ''}`}>
+              {/* LA IMAGEN PRINCIPAL APARECE AQUÍ CUANDO SE EXPANDE */}
+              {project.image && (
+                <div className="project-image-container-expanded">
+                  <img src={project.image} alt={project.title} className="project-image-expanded" />
+                </div>
+              )}
+              <h4>Más Detalles:</h4>
+              <p>{project.detailedDescription || "Descripción detallada no disponible."}</p>
+            </div>
+
             <div className="project-links">
+              {/* ... (tus enlaces se mantienen igual) ... */}
               {project.status && <span className="project-status">{project.status}</span>}
               {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} aria-label={`Ver código de ${project.title} en GitHub`}>
+                <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`Ver código de ${project.title} en GitHub`}>
                   <FaGithub /> Código
                 </a>
               )}
               {project.liveDemo && (
-                <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} aria-label={`Ver demo de ${project.title}`}>
+                <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" aria-label={`Ver demo de ${project.title}`}>
                   <FaExternalLinkAlt /> Demo
                 </a>
               )}
               {project.downloadLink && (
-                <a href={project.downloadLink} download onClick={(e) => e.stopPropagation()} aria-label={`Descargar ${project.title}`}>
+                <a href={project.downloadLink} download aria-label={`Descargar ${project.title}`}>
                   <FaFileDownload /> Descargar
                 </a>
               )}

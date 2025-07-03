@@ -49,7 +49,7 @@ const AboutMe = () => {
         <div className="timeline-item">
           <div className="timeline-dot"></div>
           <div className="timeline-content">
-            <h4>Máster en Data&IA Analytics</h4>
+            <h4>Máster en Data Analytics & IA</h4>
             <p className="timeline-place">ISDI Escuela de Negocios</p>
             <p className="timeline-date">2024 - 2025</p>
             <p>Especialización en estudios de negocio, ciencia de datos y algoritmos de Machine Learning.</p>

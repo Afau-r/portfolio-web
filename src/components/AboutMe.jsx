@@ -25,11 +25,9 @@ const AboutMe = () => {
         
         <div className="about-profile">
           <div className="profile-image">
-            {/* Puedes reemplazar esto con tu imagen real */}
             <img src="./perfilcv.jpeg" alt="Descripción" className="actual-profile-image" />
           </div>
           <div className="profile-details">
-            {/* Nueva estructura para los detalles del perfil */}
             <div className="profile-detail-item">
               <strong>Ubicación:</strong>
               <span>Barcelona, España</span>
@@ -54,7 +52,7 @@ const AboutMe = () => {
             <h4>Máster en Data&IA Analytics</h4>
             <p className="timeline-place">ISDI Escuela de Negocios</p>
             <p className="timeline-date">2024 - 2025</p>
-            <p>Especialización en estudios de negocio, algoritmos de Machine Learning y análisis predictivo.</p>
+            <p>Especialización en estudios de negocio, ciencia de datos y algoritmos de Machine Learning.</p>
           </div>
         </div>
         <div className="timeline-item">
@@ -73,19 +71,19 @@ const AboutMe = () => {
         <div className="timeline-item">
           <div className="timeline-dot"></div>
           <div className="timeline-content">
-            <h4>Audit Junior</h4>
-            <p className="timeline-place">EY</p>
-            <p className="timeline-date">2023 - 2024</p>
-            <p>Implementación de modelos para asegurar el cumplimiento de los estados financieros.</p>
+            <h4>Digital Analyst</h4>
+            <p className="timeline-place">Mango</p>
+            <p className="timeline-date">2025 - Actualidad</p>
+            <p>Implementación de modelos y técnicas analíticas para mejorar el canal ecommerce.</p>
           </div>
         </div>
         <div className="timeline-item">
           <div className="timeline-dot"></div>
           <div className="timeline-content">
-            <h4>Administrador y Contable (prácticas)</h4>
-            <p className="timeline-place">BMC Global</p>
-            <p className="timeline-date">2023 - 2023</p>
-            <p>Validar y ajustar los servicios prestados a los clientes.</p>
+            <h4>Audit Junior</h4>
+            <p className="timeline-place">EY</p>
+            <p className="timeline-date">2023 - 2024</p>
+            <p>Asegurar la claridad y el cumplimiento de los estados financieros de grandes empresas.</p>
           </div>
         </div>
       </div>

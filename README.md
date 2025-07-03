@@ -2,7 +2,7 @@
 
 ¡Bienvenido a mi portafolio como Data Scientist! Aquí muestro algunos de mis proyectos más destacados en ciencia de datos, machine learning, visualización y análisis.
 
-## 🚀 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - React + Vite
 - JavaScript
@@ -10,14 +10,14 @@
 - React Icons
 - Despliegue en GitHub Pages 
 
-## 🧠 Contenido
+## Contenido
 
 - Sobre mí
 - Proyectos de ciencia de datos
 - Habilidades técnicas
 - Contacto y redes
 
-## 📦 Instalación
+## Instalación
 
 ```bash
 npm install

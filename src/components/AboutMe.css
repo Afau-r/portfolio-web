@@ -136,6 +136,19 @@
     margin-bottom: 0.5rem;
   }
   
+  .timeline-list {
+    list-style-type: disc; 
+    padding-left: 1.5rem;  
+    margin-top: 0.8rem;    
+    margin-bottom: 0;
+  }
+
+  .timeline-list li {
+    margin-bottom: 0.5rem; 
+    line-height: 1.5;      
+    color: #f1f1f1;       
+  }
+
   @media (max-width: 768px) {
     .about-content {
       grid-template-columns: 1fr;

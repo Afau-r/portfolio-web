@@ -102,9 +102,7 @@ const Hero = () => {
           <span className="hero-role">Data Analyst & Scientist</span>
         </h1>
         <p className="hero-subtitle">
-          "Creo que cada dato tiene algo que contar. 
-          Mi día a día va desde explorar patrones curiosos en datasets hasta construir modelos 
-          que ayuden a resolver problemas reales del mundo empresarial." 
+          "Creo que cada dato tiene algo que contar." 
         </p>
         <div className="hero-cta">
           <a href="#projects" className="hero-button primary">Ver proyectos</a>

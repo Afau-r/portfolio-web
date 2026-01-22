@@ -10,10 +10,9 @@ const AboutMe = () => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            Disfruto resolviendo problemas complejos utilizando el poder de los datos. 
-            Mi objetivo es ayudar a las empresas a dejar de depender de la intuición y 
-            empezar a tomar decisiones basadas en evidencia sólida. Mi experiencia técnica 
-            abarca desde la exploración de datos hasta el despliegue de modelos predictivos.
+            Como Data Scientist, mi enfoque es práctico: transformar datos complejos en decisiones estratégicas claras. 
+            Tengo experiencia cubriendo el ciclo completo del dato, desde el análisis exploratorio 
+            hasta la implementación de modelos de Machine Learning que resuelven retos de negocio reales.
           </p>
           <p>
             Me apasiona la intersección entre tecnología y competición (deportes y e-sports), 
@@ -73,11 +72,11 @@ const AboutMe = () => {
             <h4>Digital Analyst</h4>
             <p className="timeline-place">Mango</p>
             <p className="timeline-date">2025 - Actualidad</p>
-            <p> - Garantizar la calidad del dato y definir estrategias de analítica basadas en el tracking del usuario, 
-                embudos de compra y métricas de conversión para detectar oportunidades de crecimiento para el área de ecommerce.
-                - Diseñar y mantener modelos de datos en el entorno de Databricks por medio de lenguajes tales como SQL y Python 
-                para facilitar su reporting mediante la automatización de procesos de ingesta y visualización de datos. 
-                - Desarrollar paneles de control en Power BI, Looker y Google Analytics.</p>
+            <ul className="timeline-list">
+              <li>Garantizar la calidad del dato y definir estrategias de analítica basadas en el tracking del usuario, embudos de compra y métricas de conversión para detectar oportunidades de crecimiento para el área de ecommerce.</li>
+              <li>Diseñar y mantener modelos de datos en el entorno de Databricks por medio de lenguajes tales como SQL y Python para facilitar su reporting mediante la automatización de procesos de ingesta y visualización de datos.</li>
+              <li>Desarrollar paneles de control en Power BI y Looker.</li>
+            </ul>
           </div>
         </div>
         <div className="timeline-item">

@@ -10,16 +10,15 @@ const AboutMe = () => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            Cuando trabajo como Data Scientist, no solo veo números: veo oportunidades para que las empresas 
-            entiendan mejor a sus clientes, optimicen sus procesos y encuentren nuevos caminos de crecimiento. 
-            Mi experiencia abarca desde el análisis exploratorio hasta la implementación de 
-            modelos de machine learning para resolver problemas empresariales reales.
+            Disfruto resolviendo problemas complejos utilizando el poder de los datos. 
+            Mi objetivo es ayudar a las empresas a dejar de depender de la intuición y 
+            empezar a tomar decisiones basadas en evidencia sólida. Mi experiencia técnica 
+            abarca desde la exploración de datos hasta el despliegue de modelos predictivos.
           </p>
           <p>
-            Me impulsa un gran interés por la intersección de la tecnología con áreas 
-            como el deporte y los e-sports, explorando cómo los datos pueden optimizar 
-            el rendimiento y la estrategia. Mi enfoque se centra en extraer insights clave 
-            y traducirlos en decisiones que fomenten la eficiencia y la innovación continua.
+            Me apasiona la intersección entre tecnología y competición (deportes y e-sports), 
+            fascinado por cómo la estadística puede definir una estrategia ganadora. 
+            Busco llevar esa búsqueda de eficiencia e innovación a cada proyecto.
           </p>
         </div>
         
@@ -50,9 +49,9 @@ const AboutMe = () => {
           <div className="timeline-dot"></div>
           <div className="timeline-content">
             <h4>Máster en Data Analytics & IA</h4>
-            <p className="timeline-place">ISDI Escuela de Negocios</p>
+            <p className="timeline-place">ISDI Escuela Digital</p>
             <p className="timeline-date">2024 - 2025</p>
-            <p>Especialización en estudios de negocio, ciencia de datos y algoritmos de Machine Learning.</p>
+            <p>Especialización en ciencia de datos y algoritmos de Machine Learning aplicados a negocio.</p>
           </div>
         </div>
         <div className="timeline-item">
@@ -74,7 +73,11 @@ const AboutMe = () => {
             <h4>Digital Analyst</h4>
             <p className="timeline-place">Mango</p>
             <p className="timeline-date">2025 - Actualidad</p>
-            <p>Implementación de modelos y técnicas analíticas para mejorar el canal ecommerce.</p>
+            <p> - Garantizar la calidad del dato y definir estrategias de analítica basadas en el tracking del usuario, 
+                embudos de compra y métricas de conversión para detectar oportunidades de crecimiento para el área de ecommerce.
+                - Diseñar y mantener modelos de datos en el entorno de Databricks por medio de lenguajes tales como SQL y Python 
+                para facilitar su reporting mediante la automatización de procesos de ingesta y visualización de datos. 
+                - Desarrollar paneles de control en Power BI, Looker y Google Analytics.</p>
           </div>
         </div>
         <div className="timeline-item">

@@ -13,7 +13,8 @@ const Skills = () => {
       skills: [
         { name: "Python", level: 80 }, 
         { name: "SQL", level: 90 },    
-        { name: "Tableau", level: 95 },
+        { name: "Tableau", level: 90 },
+        { name: "Power BI", level: 80 },
       ]
     },
     {
@@ -21,7 +22,8 @@ const Skills = () => {
       icon: <FaDatabase />,
       skills: [
         { name: "Pandas", level: 90 },
-        { name: "NumPy", level: 70 }, 
+        { name: "NumPy", level: 70 },
+        { name: "Pyspark", level: 70 }, 
         { name: "Scikit-learn", level: 60 },
       ]
     },
@@ -35,12 +37,13 @@ const Skills = () => {
       ]
     },
     {
-      category: "Cloud & Herramientas",
+      category: "Cloud & Others",
       icon: <FaCloud />,
       skills: [
-        { name: "Google Cloud Platform", level: 70 },
+        { name: "Azure Databricks", level: 80 },
+        { name: "Google Cloud Platform", level: 40 },
         { name: "Jupyter", level: 95 },
-        { name: "Git", level: 50 }, 
+        { name: "Git", level: 60 }, 
       ]
     }
   ];

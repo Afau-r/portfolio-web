@@ -12,7 +12,7 @@ const Projects = () => {
       detailedDescription: "Este proyecto implicó la recolección de datos de listados inmobiliarios en Dubái, limpieza exhaustiva, y el entrenamiento de un modelo de regresión para predecir precios y rentabilidad. Se utilizaron técnicas de visualización para mapear las 'zonas calientes' para inversión.",
       technologies: ["Python", "Pandas", "Scikit-learn", "GeoPandas", "Matplotlib"],
       image: "./growth_opportunities.png",
-      github: "https://github.com/Afau-r/Projects",
+      github: "https://github.com/Afau-r/Data-Science-Projects/tree/main/01_Real_Estate_Dubai",
       liveDemo: null,
     },
     {
@@ -33,7 +33,7 @@ const Projects = () => {
       detailedDescription: "Aplicación del algoritmo K-Means para la segmentación de clientes basada en su comportamiento de compra (RFM: Recencia, Frecuencia, Monetario). Se visualizaron los clusters resultantes y se propusieron estrategias de marketing personalizadas para cada segmento, con el fin de aumentar la retención y el valor del cliente.",
       technologies: ["Python", "Scikit-learn", "K-Means", "Matplotlib"],
       image: "./rfm_3d_clusters.png",
-      github: "https://github.com/Afau-r/Projects",
+      github: "https://github.com/Afau-r/Data-Science-Projects/tree/main/02_Customer_Segmentation_RFM",
       liveDemo: null,
     },
     {
@@ -54,7 +54,7 @@ const Projects = () => {
       detailedDescription: "Este proyecto se centró en el desarrollo de un modelo predictivo para la retención de talento. Se utilizaron datos históricos para entrenar un clasificador Random Forest capaz de identificar patrones asociados con la fuga de empleados, permitiendo a RRHH intervenir proactivamente.",
       technologies: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Matplotlib"],
       image: "./random_forest.png",
-      github: "https://github.com/Afau-r/Projects",
+      github: "https://github.com/Afau-r/Data-Science-Projects/tree/main/03_Employee_Churn_Prediction",
       liveDemo: null,
     },
     {

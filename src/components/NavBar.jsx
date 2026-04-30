@@ -87,11 +87,11 @@ const NavBar = () => {
             </a>
           ))}
           <a 
-            href="./CV_AlexFauRidao.pdf" // carpeta public
+            href="./cv00_Alex_Fau_Ridao.pdf" // carpeta public
             target="_blank" 
             rel="noreferrer" 
             className="cv-button"
-            onClick={() => setMenuOpen(false)} // Cierra el menú también al hacer clic
+            onClick={() => setMenuOpen(false)} 
           >
             <FaDownload style={{ marginRight: '8px' }} /> Descargar CV
           </a>

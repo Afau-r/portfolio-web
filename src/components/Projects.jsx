@@ -7,12 +7,12 @@ const Projects = () => {
   const projectsData = [
     {
       id: 0,
+      featured: true,
       title: "GainzTracker",
       badge: "Full-Stack App",
       description: "App de fitness full-stack con seguimiento de entrenamientos, métricas corporales, fotos de progreso y coaching personalizado por IA.",
       detailedDescription: "Aplicación completa construida con React 19 (Vite) en el frontend y FastAPI (Python) en el backend, con Supabase como capa de autenticación, base de datos y almacenamiento de fotos. El motor de coaching calcula targets de RPE personalizados, e1RM y clasifica el rendimiento según la fase del usuario (volumen/definición/recomposición). Las rutinas soportan drag-and-drop para reordenamiento, las sesiones persisten entre recargas y la app está desplegada en Vercel con soporte iOS/Android via Capacitor.",
       technologies: ["React 19", "FastAPI", "Supabase", "Python", "SQLAlchemy", "Vite", "Capacitor"],
-      image: "./gainztracker_screenshot.png",
       github: null,
       liveDemo: "https://gainztracker-three.vercel.app",
     },
@@ -106,38 +106,62 @@ const Projects = () => {
         {projectsData.map((project, index) => (
           <div
             key={project.id}
-            className={`project-card ${expandedId === project.id ? 'expanded' : ''} fade-in-up`}
+            className={`project-card ${project.featured ? 'project-card-featured' : ''} ${expandedId === project.id ? 'expanded' : ''} fade-in-up`}
             onClick={(e) => {
-              // Solo expandir/colapsar si el clic no fue sobre un enlace o su icono
               if (e.target.closest('a') === null) {
                 toggleExpand(project.id);
               }
             }}
             style={{ "--animation-delay": `${index * 0.1}s` }}
           >
-            {/* --- Contenido siempre visible (colapsado) --- */}
-            <div className="project-content-base">
-              {project.badge && (
-                <span className="project-type-badge">{project.badge}</span>
-              )}
-              <h3>{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              <div className="project-tech">
-                {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="tech-badge">{tech}</span>
-                ))}
+            {project.featured ? (
+              /* --- Layout featured: phones izquierda + contenido derecha --- */
+              <div className="featured-inner">
+                <div className="featured-phones">
+                  <div className="phone-frame">
+                    <img src="./gt_dashboard.png" alt="Dashboard" />
+                  </div>
+                  <div className="phone-frame phone-hero">
+                    <img src="./gt_workout.png" alt="Workout" />
+                  </div>
+                  <div className="phone-frame">
+                    <img src="./gt_progress.png" alt="Progress" />
+                  </div>
+                </div>
+                <div className="featured-content">
+                  <span className="project-type-badge">{project.badge}</span>
+                  <h3>{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+                  <div className="project-tech">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="tech-badge">{tech}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
+            ) : (
+              /* --- Layout estándar --- */
+              <div className="project-content-base">
+                {project.badge && (
+                  <span className="project-type-badge">{project.badge}</span>
+                )}
+                <h3>{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                <div className="project-tech">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-badge">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* --- Contenido que aparece al expandir --- */}
             <div className={`project-details-expanded ${expandedId === project.id ? 'visible' : ''}`}>
-              {project.image && (
+              {!project.featured && project.image && (
                 <div className="project-image-container-expanded">
                   <img src={project.image} alt={project.title} className="project-image-expanded" />
                 </div>
               )}
-              {/* Puedes descomentar la siguiente línea si quieres un título "Más Detalles" */}
-              {/* <h4 className="detailed-title">Más Detalles:</h4> */}
               <p className="detailed-description-text">
                 {project.detailedDescription || "Próximamente más detalles sobre este proyecto."}
               </p>

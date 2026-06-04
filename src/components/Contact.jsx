@@ -53,7 +53,7 @@ const Contact = () => {
               <FaLinkedin className="contact-icon" />
               <div>
                 <h4>LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/alex-fau-ridao/" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/alex-fau-ridao/" target="_blank" rel="noopener noreferrer">
                   linkedin.com/in/alex-fau-ridao
                 </a>
               </div>
@@ -63,7 +63,7 @@ const Contact = () => {
               <FaGithub className="contact-icon" />
               <div>
                 <h4>GitHub</h4>
-                <a href="https://github.com/Afau-r" target="_blank" rel="noreferrer">
+                <a href="https://github.com/Afau-r" target="_blank" rel="noopener noreferrer">
                   github.com/Afau-r
                 </a>
               </div>

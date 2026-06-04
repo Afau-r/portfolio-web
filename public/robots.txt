@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://afau-r.github.io/portfolio-web/sitemap.xml

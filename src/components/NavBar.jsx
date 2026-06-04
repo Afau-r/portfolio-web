@@ -88,8 +88,8 @@ const NavBar = () => {
           ))}
           <a 
             href="./cv00_Alex_Fau_Ridao.pdf" // carpeta public
-            target="_blank" 
-            rel="noreferrer" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="cv-button"
             onClick={() => setMenuOpen(false)} 
           >

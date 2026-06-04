@@ -33,6 +33,20 @@
   flex-grow: 1;
 }
 
+.project-type-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(var(--primary-color-rgb, 0, 224, 255), 0.15), rgba(var(--primary-color-rgb, 0, 224, 255), 0.04));
+  border: 1px solid rgba(var(--primary-color-rgb, 0, 224, 255), 0.4);
+  color: var(--primary-color);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
 .project-card h3 {
   color: var(--primary-color);
   margin-bottom: 0.8rem;

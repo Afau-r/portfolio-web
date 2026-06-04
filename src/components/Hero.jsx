@@ -99,10 +99,10 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">
           <span className="hero-name">Alex Fau Ridao</span>
-          <span className="hero-role">Data Analyst & Scientist</span>
+          <span className="hero-role">Analytics Engineer & Data Scientist</span>
         </h1>
         <p className="hero-subtitle">
-          "Creo que cada dato tiene algo que contar." 
+          Construyendo pipelines fiables, modelos que predicen y productos que se usan.
         </p>
         <div className="hero-cta">
           <a href="#projects" className="hero-button primary">Ver proyectos</a>

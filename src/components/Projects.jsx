@@ -6,6 +6,17 @@ import "./Projects.css";
 const Projects = () => {
   const projectsData = [
     {
+      id: 0,
+      title: "GainzTracker",
+      badge: "Full-Stack App",
+      description: "App de fitness full-stack con seguimiento de entrenamientos, métricas corporales, fotos de progreso y coaching personalizado por IA.",
+      detailedDescription: "Aplicación completa construida con React 19 (Vite) en el frontend y FastAPI (Python) en el backend, con Supabase como capa de autenticación, base de datos y almacenamiento de fotos. El motor de coaching calcula targets de RPE personalizados, e1RM y clasifica el rendimiento según la fase del usuario (volumen/definición/recomposición). Las rutinas soportan drag-and-drop para reordenamiento, las sesiones persisten entre recargas y la app está desplegada en Vercel con soporte iOS/Android via Capacitor.",
+      technologies: ["React 19", "FastAPI", "Supabase", "Python", "SQLAlchemy", "Vite", "Capacitor"],
+      image: "./gainztracker_screenshot.png",
+      github: null,
+      liveDemo: "https://gainztracker-three.vercel.app",
+    },
+    {
       id: 1,
       title: "Predicción inmobiliaria (Dubái)",
       description: "Análisis con Python para detectar zonas de alta rentabilidad utilizando regresión y visualización de métricas específicas.",
@@ -106,6 +117,9 @@ const Projects = () => {
           >
             {/* --- Contenido siempre visible (colapsado) --- */}
             <div className="project-content-base">
+              {project.badge && (
+                <span className="project-type-badge">{project.badge}</span>
+              )}
               <h3>{project.title}</h3>
               <p className="project-description">{project.description}</p>
               <div className="project-tech">

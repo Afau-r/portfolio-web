@@ -10,14 +10,14 @@ const AboutMe = () => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            Como Data Scientist, mi enfoque es práctico: transformar datos complejos en decisiones estratégicas claras. 
-            Tengo experiencia cubriendo el ciclo completo del dato, desde el análisis exploratorio 
-            hasta la implementación de modelos de Machine Learning que resuelven retos de negocio reales.
+            Soy Analytics Engineer y Data Scientist especializado en el ciclo completo del dato: desde la construcción
+            de pipelines y el modelado en Databricks, hasta el desarrollo de modelos predictivos que resuelven
+            retos de negocio reales con SQL, Python y PySpark en entornos cloud de alta demanda.
           </p>
           <p>
-            Me apasiona la intersección entre tecnología y competición (deportes y e-sports), 
-            fascinado por cómo la estadística puede definir una estrategia ganadora. 
-            Busco llevar esa búsqueda de eficiencia e innovación a cada proyecto.
+            Me interesa la convergencia entre ingeniería analítica, ciencia de datos e inteligencia artificial —
+            incluyendo el desarrollo de agentes LLM y automatizaciones con MCP — complementada con la creación
+            de productos propios que llevan el dato más allá del informe.
           </p>
         </div>
         
@@ -71,11 +71,12 @@ const AboutMe = () => {
           <div className="timeline-content">
             <h4>Digital Analyst</h4>
             <p className="timeline-place">Mango</p>
-            <p className="timeline-date">2025 - Actualidad</p>
+            <p className="timeline-date">Jul 2025 - Actualidad</p>
             <ul className="timeline-list">
-              <li>Garantizar la calidad del dato y definir estrategias de analítica basadas en el tracking del usuario, embudos de compra y métricas de conversión para detectar oportunidades de crecimiento para el área de ecommerce.</li>
-              <li>Diseñar y mantener modelos de datos en el entorno de Databricks por medio de lenguajes tales como SQL y Python para facilitar su reporting mediante la automatización de procesos de ingesta y visualización de datos.</li>
-              <li>Desarrollar paneles de control en Power BI y Looker.</li>
+              <li>Diseño y despliegue de un framework analítico en Databricks (SQL + PySpark) para estandarizar métricas de disponibilidad online y mejorar la lectura de negocio en ecommerce.</li>
+              <li>Construcción de pipelines automatizados desde Azure Databricks hasta Power BI, garantizando trazabilidad end-to-end, calidad del dato y disponibilidad para los equipos de negocio.</li>
+              <li>Desarrollo de un modelo de atribución data-driven multicanal para apoyar decisiones comerciales y de marketing.</li>
+              <li>Definición de métricas reutilizables y lógica de reporting escalable para asegurar consistencia en los análisis recurrentes.</li>
             </ul>
           </div>
         </div>
@@ -83,9 +84,12 @@ const AboutMe = () => {
           <div className="timeline-dot"></div>
           <div className="timeline-content">
             <h4>Audit Junior</h4>
-            <p className="timeline-place">EY</p>
-            <p className="timeline-date">2023 - 2024</p>
-            <p>Asegurar la claridad y el cumplimiento de los estados financieros de grandes empresas.</p>
+            <p className="timeline-place">Ernst & Young (EY)</p>
+            <p className="timeline-date">Nov 2023 - Ago 2024</p>
+            <ul className="timeline-list">
+              <li>Procesé y analicé grandes volúmenes de datos financieros de empresas multinacionales para apoyar validaciones y controles de auditoría.</li>
+              <li>Desarrollé scripts para automatizar tareas repetitivas de datos, reduciendo el tiempo de procesamiento manual.</li>
+            </ul>
           </div>
         </div>
       </div>

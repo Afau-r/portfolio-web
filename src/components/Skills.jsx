@@ -1,6 +1,6 @@
 // src/components/Skills.jsx
 import React, { useEffect, useRef } from "react";
-import { FaTools, FaPython, FaDatabase, FaChartBar, FaCloud } from "react-icons/fa";
+import { FaTools, FaDatabase, FaChartBar, FaBrain, FaRobot } from "react-icons/fa";
 import "./Skills.css";
 
 const Skills = () => {
@@ -8,42 +8,43 @@ const Skills = () => {
 
   const skillGroups = [
     {
-      category: "Herramientas",
-      icon: <FaPython />,
-      skills: [
-        { name: "Python", level: 80 }, 
-        { name: "SQL", level: 90 },    
-        { name: "Tableau", level: 90 },
-        { name: "Power BI", level: 80 },
-      ]
-    },
-    {
-      category: "Análisis de Datos",
+      category: "Ingeniería Analítica",
       icon: <FaDatabase />,
       skills: [
-        { name: "Pandas", level: 90 },
-        { name: "NumPy", level: 70 },
-        { name: "Pyspark", level: 70 }, 
-        { name: "Scikit-learn", level: 60 },
+        { name: "SQL", level: 95 },
+        { name: "Python", level: 80 },
+        { name: "PySpark", level: 70 },
+        { name: "Azure Databricks", level: 80 },
       ]
     },
     {
-      category: "Modelos ML", 
+      category: "Visualización & BI",
       icon: <FaChartBar />,
       skills: [
-        { name: "Clustering", level: 90 },
-        { name: "Series Temporales", level: 80 },
-        { name: "Random Forest", level: 75 }, 
+        { name: "Power BI", level: 80 },
+        { name: "Tableau", level: 85 },
+        { name: "BigQuery", level: 65 },
+        { name: "Git", level: 65 },
       ]
     },
     {
-      category: "Cloud & Others",
-      icon: <FaCloud />,
+      category: "Machine Learning",
+      icon: <FaBrain />,
       skills: [
-        { name: "Azure Databricks", level: 80 },
-        { name: "Google Cloud Platform", level: 40 },
-        { name: "Jupyter", level: 95 },
-        { name: "Git", level: 60 }, 
+        { name: "Scikit-learn", level: 75 },
+        { name: "Clustering & RFM", level: 90 },
+        { name: "Series Temporales", level: 80 },
+        { name: "Random Forest", level: 75 },
+      ]
+    },
+    {
+      category: "IA & Desarrollo",
+      icon: <FaRobot />,
+      skills: [
+        { name: "LLM Agents (Claude/GPT)", level: 75 },
+        { name: "MCP (Model Context Protocol)", level: 70 },
+        { name: "Prompt Engineering", level: 80 },
+        { name: "React + FastAPI", level: 70 },
       ]
     }
   ];
@@ -59,8 +60,6 @@ useEffect(() => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // La sección está visible: animar las barras
-          console.log("Skills section is intersecting, animating bars."); // Para depuración
           progressBars.forEach((bar, index) => {
             bar.style.width = '0%'; // Forzar reseteo inmediato antes de la animación
 
@@ -73,7 +72,6 @@ useEffect(() => {
           });
 
         } else {
-          console.log("Skills section is NOT intersecting, resetting bars."); // Para depuración
           progressBars.forEach((bar) => {
             bar.style.width = '0%';
           });

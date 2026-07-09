@@ -71,7 +71,7 @@ const AboutMe = () => {
           <div className="timeline-content">
             <h4>Digital Analyst</h4>
             <p className="timeline-place">Mango</p>
-            <p className="timeline-date">Jul 2025 - Actualidad</p>
+            <p className="timeline-date">Jun 2025 - Actualidad</p>
             <ul className="timeline-list">
               <li>Diseño y despliegue de un framework analítico en Databricks (SQL + PySpark) para estandarizar métricas de disponibilidad online y mejorar la lectura de negocio en ecommerce.</li>
               <li>Construcción de pipelines automatizados desde Azure Databricks hasta Power BI, garantizando trazabilidad end-to-end, calidad del dato y disponibilidad para los equipos de negocio.</li>

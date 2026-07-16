@@ -1,9 +1,11 @@
 // src/components/NavBar.jsx
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
+import { useLanguage } from "../i18n/LanguageContext";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const { lang, toggleLang, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -60,40 +62,48 @@ const NavBar = () => {
   };
 
   const navLinks = [
-    { id: "about", text: "Sobre mí" },
-    { id: "projects", text: "Proyectos" },
-    { id: "skills", text: "Habilidades" },
-    { id: "contact", text: "Contacto" },
+    { id: "about", text: t.nav.links.about },
+    { id: "projects", text: t.nav.links.projects },
+    { id: "skills", text: t.nav.links.skills },
+    { id: "contact", text: t.nav.links.contact },
   ];
 
   return (
     <nav className={`navbar ${scrolled || menuOpen ? "navbar-scrolled" : ""}`}>
       <div className="navbar-content">
         <div className="navbar-logo">
-          <a href="#" onClick={(e) => closeMenuAndScroll(e, '#')}>Mi Portfolio</a>
+          <a href="#" onClick={(e) => closeMenuAndScroll(e, '#')}>{t.nav.logo}</a>
         </div>
         <div className="navbar-toggle" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
         <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
           {navLinks.map(link => (
-            <a 
+            <a
               key={link.id}
-              href={`#${link.id}`} 
+              href={`#${link.id}`}
               onClick={(e) => closeMenuAndScroll(e, `#${link.id}`)}
               className={activeSection === link.id ? 'active' : ''}
             >
               {link.text}
             </a>
           ))}
-          <a 
-            href="./cv00_Alex_Fau_Ridao.pdf" // carpeta public
+          <button
+            type="button"
+            className="lang-toggle"
+            onClick={toggleLang}
+            aria-label="Toggle language"
+          >
+            {lang === 'es' ? 'EN' : 'ES'}
+          </button>
+          <a
+            href={lang === 'en' ? './cv00_Alex_Fau_Ridao_en.pdf' : './cv00_Alex_Fau_Ridao.pdf'} // carpeta public
             target="_blank"
             rel="noopener noreferrer"
             className="cv-button"
-            onClick={() => setMenuOpen(false)} 
+            onClick={() => setMenuOpen(false)}
           >
-            <FaDownload style={{ marginRight: '8px' }} /> Descargar CV
+            <FaDownload style={{ marginRight: '8px' }} /> {t.nav.cvButton}
           </a>
         </div>
       </div>

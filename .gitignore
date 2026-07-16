@@ -25,6 +25,10 @@ secrets.json
 credentials.json
 service-account*.json
 
+# Internal Mango work — must never be published on this public repo
+/attribution_model/
+/stock/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

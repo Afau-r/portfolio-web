@@ -1,14 +1,16 @@
 // src/components/Skills.jsx
 import React, { useEffect, useRef } from "react";
 import { FaTools, FaDatabase, FaChartBar, FaBrain, FaRobot } from "react-icons/fa";
+import { useLanguage } from "../i18n/LanguageContext";
 import "./Skills.css";
 
 const Skills = () => {
+  const { t } = useLanguage();
   const skillsRef = useRef(null);
 
   const skillGroups = [
     {
-      category: "Ingeniería Analítica",
+      category: t.skills.categories.analyticsEngineering,
       icon: <FaDatabase />,
       skills: [
         { name: "SQL", level: 95 },
@@ -18,7 +20,7 @@ const Skills = () => {
       ]
     },
     {
-      category: "Visualización & BI",
+      category: t.skills.categories.visualizationBI,
       icon: <FaChartBar />,
       skills: [
         { name: "Power BI", level: 80 },
@@ -28,7 +30,7 @@ const Skills = () => {
       ]
     },
     {
-      category: "Machine Learning",
+      category: t.skills.categories.machineLearning,
       icon: <FaBrain />,
       skills: [
         { name: "Scikit-learn", level: 75 },
@@ -38,7 +40,7 @@ const Skills = () => {
       ]
     },
     {
-      category: "IA & Desarrollo",
+      category: t.skills.categories.aiDevelopment,
       icon: <FaRobot />,
       skills: [
         { name: "LLM Agents (Claude/GPT)", level: 75 },
@@ -94,7 +96,7 @@ useEffect(() => {
 
   return (
     <section className="section skills-section" ref={skillsRef}>
-      <h2><FaTools /> Habilidades técnicas</h2>
+      <h2><FaTools /> {t.skills.heading}</h2>
       <div className="skills-container">
         {skillGroups.map((group, groupIndex) => (
           <div key={groupIndex} className="skill-group">

@@ -1,9 +1,11 @@
 // src/components/Hero.jsx
 import React, { useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useLanguage } from "../i18n/LanguageContext";
 import "./Hero.css";
 
 const Hero = () => {
+  const { t } = useLanguage();
   const canvasRef = useRef(null);
 
   // Efecto de partículas en el fondo
@@ -99,14 +101,14 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">
           <span className="hero-name">Alex Fau Ridao</span>
-          <span className="hero-role">Analytics Engineer & Data Scientist</span>
+          <span className="hero-role">{t.hero.role}</span>
         </h1>
         <p className="hero-subtitle">
-          Construyendo pipelines fiables, modelos que predicen y productos que se usan.
+          {t.hero.subtitle}
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="hero-button primary">Ver proyectos</a>
-          <a href="#contact" className="hero-button secondary">Contacto</a>
+          <a href="#projects" className="hero-button primary">{t.hero.ctaPrimary}</a>
+          <a href="#contact" className="hero-button secondary">{t.hero.ctaSecondary}</a>
         </div>
         <div className="hero-social">
           <a href="https://linkedin.com/in/alex-fau-ridao" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">

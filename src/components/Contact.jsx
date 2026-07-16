@@ -1,16 +1,19 @@
 // 5. src/components/Contact.jsx
 import React, { useState } from "react";
 import { FaEnvelope, FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
+import { useLanguage } from "../i18n/LanguageContext";
 import "./Contact.css";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  const { contact } = t;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""
   });
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -18,27 +21,27 @@ const Contact = () => {
       [name]: value
     }));
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Crear el enlace mailto con los datos del formulario
     const subject = encodeURIComponent(formData.subject);
     const body = encodeURIComponent(
-      `Mensaje de: ${formData.name}\nEmail de contacto: ${formData.email}\n\n${formData.message}`
+      `${contact.mailto.messageFrom} ${formData.name}\n${contact.mailto.contactEmail} ${formData.email}\n\n${formData.message}`
     );
-    
+
     // Abrir el cliente de correo del usuario
     window.location.href = `mailto:afau2000@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
     <section className="section contact-section">
-      <h2><FaEnvelope /> Contacto</h2>
-      
+      <h2><FaEnvelope /> {contact.heading}</h2>
+
       <div className="contact-content">
         <div className="contact-info">
-          <p>¿Tienes un proyecto interesante o quieres hablar sobre oportunidades de colaboración? Conectemos!</p>
+          <p>{contact.intro}</p>
           
           <div className="contact-methods">
             <div className="contact-method">
@@ -74,7 +77,7 @@ const Contact = () => {
         <div className="contact-form-container">
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Nombre</label>
+              <label htmlFor="name">{contact.form.nameLabel}</label>
               <input 
                 type="text" 
                 id="name" 
@@ -86,7 +89,7 @@ const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{contact.form.emailLabel}</label>
               <input 
                 type="email" 
                 id="email" 
@@ -98,7 +101,7 @@ const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="subject">Asunto</label>
+              <label htmlFor="subject">{contact.form.subjectLabel}</label>
               <input 
                 type="text" 
                 id="subject" 
@@ -110,7 +113,7 @@ const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="message">Mensaje</label>
+              <label htmlFor="message">{contact.form.messageLabel}</label>
               <textarea 
                 id="message" 
                 name="message" 
@@ -122,7 +125,7 @@ const Contact = () => {
             </div>
             
             <button type="submit" className="submit-button">
-              <FaPaperPlane /> Enviar mensaje
+              <FaPaperPlane /> {contact.form.submitButton}
             </button>
           </form>
         </div>

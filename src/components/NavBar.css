@@ -84,7 +84,6 @@
   .lang-switch {
     display: flex;
     align-items: center;
-    border: 2px solid var(--primary-color);
     border-radius: 6px;
     overflow: hidden;
   }

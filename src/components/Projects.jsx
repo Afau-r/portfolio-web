@@ -13,14 +13,6 @@ const projectsMeta = [
     liveDemo: "https://gainztracker-three.vercel.app",
   },
   {
-    id: 7,
-    technologies: ["Databricks", "SQL", "PySpark", "Power BI", "Azure"],
-    image: null,
-    github: null,
-    liveDemo: null,
-    downloadLink: null,
-  },
-  {
     id: 8,
     technologies: ["Databricks", "SQL", "PySpark", "Marketing Attribution", "Markov Chains"],
     image: null,
@@ -29,11 +21,12 @@ const projectsMeta = [
     downloadLink: null,
   },
   {
-    id: 1,
-    technologies: ["Python", "Pandas", "Scikit-learn", "GeoPandas", "Matplotlib"],
-    image: "./growth_opportunities.png",
-    github: "https://github.com/Afau-r/Data-Science-Projects/tree/main/01_Real_Estate_Dubai",
+    id: 7,
+    technologies: ["Databricks", "SQL", "PySpark", "Power BI", "Azure"],
+    image: null,
+    github: null,
     liveDemo: null,
+    downloadLink: null,
   },
   {
     id: 2,
@@ -48,21 +41,6 @@ const projectsMeta = [
     technologies: ["Python", "Scikit-learn", "K-Means", "Matplotlib"],
     image: "./rfm_3d_clusters.png",
     github: "https://github.com/Afau-r/Data-Science-Projects/tree/main/02_Customer_Segmentation_RFM",
-    liveDemo: null,
-  },
-  {
-    id: 4,
-    technologies: ["Tableau", "SQL", "Excel"],
-    image: "./dashboard_bienestar.png",
-    downloadLink: "./Dashboard_de_Bienestar.twbx",
-    downloadIconType: "dashboard",
-    github: null,
-  },
-  {
-    id: 5,
-    technologies: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Matplotlib"],
-    image: "./random_forest.png",
-    github: "https://github.com/Afau-r/Data-Science-Projects/tree/main/03_Employee_Churn_Prediction",
     liveDemo: null,
   },
   {

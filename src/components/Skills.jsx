@@ -1,6 +1,6 @@
 // src/components/Skills.jsx
 import React, { useEffect, useRef } from "react";
-import { FaTools, FaDatabase, FaChartBar, FaBrain, FaRobot } from "react-icons/fa";
+import { FaTools, FaDatabase, FaChartBar, FaBrain, FaCloud } from "react-icons/fa";
 import { useLanguage } from "../i18n/LanguageContext";
 import "./Skills.css";
 
@@ -14,9 +14,19 @@ const Skills = () => {
       icon: <FaDatabase />,
       skills: [
         { name: "SQL", level: 95 },
-        { name: "Python", level: 80 },
-        { name: "PySpark", level: 70 },
-        { name: "Azure Databricks", level: 80 },
+        { name: "Python", level: 85 },
+        { name: "PySpark", level: 75 },
+        { name: "Azure Databricks", level: 85 },
+      ]
+    },
+    {
+      category: t.skills.categories.cloudWarehousing,
+      icon: <FaCloud />,
+      skills: [
+        { name: "Azure", level: 75 },
+        { name: "Snowflake", level: 55 },
+        { name: "BigQuery", level: 65 },
+        { name: "dbt", level: 55 },
       ]
     },
     {
@@ -25,8 +35,8 @@ const Skills = () => {
       skills: [
         { name: "Power BI", level: 80 },
         { name: "Tableau", level: 85 },
-        { name: "BigQuery", level: 65 },
-        { name: "Git", level: 65 },
+        { name: "Looker", level: 55 },
+        { name: "Google Analytics 4", level: 55 },
       ]
     },
     {
@@ -35,18 +45,8 @@ const Skills = () => {
       skills: [
         { name: "Scikit-learn", level: 75 },
         { name: "Clustering & RFM", level: 90 },
-        { name: "Series Temporales", level: 80 },
+        { name: "Time Series Forecasting", level: 80 },
         { name: "Random Forest", level: 75 },
-      ]
-    },
-    {
-      category: t.skills.categories.aiDevelopment,
-      icon: <FaRobot />,
-      skills: [
-        { name: "LLM Agents (Claude/GPT)", level: 75 },
-        { name: "MCP (Model Context Protocol)", level: 70 },
-        { name: "Prompt Engineering", level: 80 },
-        { name: "React + FastAPI", level: 70 },
       ]
     }
   ];

@@ -5,7 +5,7 @@ import { useLanguage } from "../i18n/LanguageContext";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const { lang, toggleLang, t } = useLanguage();
+  const { lang, setLang, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -88,14 +88,24 @@ const NavBar = () => {
               {link.text}
             </a>
           ))}
-          <button
-            type="button"
-            className="lang-toggle"
-            onClick={toggleLang}
-            aria-label="Toggle language"
-          >
-            {lang === 'es' ? 'EN' : 'ES'}
-          </button>
+          <div className="lang-switch" role="group" aria-label="Language selector">
+            <button
+              type="button"
+              className={`lang-option ${lang === 'es' ? 'active' : ''}`}
+              onClick={() => setLang('es')}
+              aria-pressed={lang === 'es'}
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              className={`lang-option ${lang === 'en' ? 'active' : ''}`}
+              onClick={() => setLang('en')}
+              aria-pressed={lang === 'en'}
+            >
+              EN
+            </button>
+          </div>
           <a
             href={lang === 'en' ? './cv00_Alex_Fau_Ridao_en.pdf' : './cv00_Alex_Fau_Ridao.pdf'} // carpeta public
             target="_blank"

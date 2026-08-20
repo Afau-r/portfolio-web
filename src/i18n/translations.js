@@ -1,9 +1,9 @@
 export const translations = {
   es: {
     meta: {
-      title: "Alex Fau | Analytics Engineer & Data Scientist",
+      title: "Alex Fau | Data Engineer & Analytics Engineer",
       description:
-        "Portafolio de Alex Fau: Analytics Engineer y Data Scientist especializado en SQL, Python, PySpark, Databricks, modelos ML y desarrollo full-stack.",
+        "Portafolio de Alex Fau: Data Engineer y Analytics Engineer especializado en SQL, Python, PySpark, Databricks, dbt y Snowflake.",
     },
     nav: {
       logo: "Mi Portfolio",
@@ -16,17 +16,17 @@ export const translations = {
       cvButton: "Descargar CV",
     },
     hero: {
-      role: "Analytics Engineer & Data Scientist",
+      role: "Data Engineer & Analytics Engineer",
       subtitle:
-        "Construyendo pipelines fiables, modelos que predicen y productos que se usan.",
+        "Construyendo pipelines de datos fiables, métricas que aportan valor de negocio y productos que se usan.",
       ctaPrimary: "Ver proyectos",
       ctaSecondary: "Contacto",
     },
     about: {
       heading: "Sobre mí",
       bio: [
-        "Soy Analytics Engineer y Data Scientist especializado en el ciclo completo del dato: desde la construcción de pipelines y el modelado en Databricks, hasta el desarrollo de modelos predictivos que resuelven retos de negocio reales con SQL, Python y PySpark en entornos cloud de alta demanda.",
-        "Me interesa la convergencia entre ingeniería analítica, ciencia de datos e inteligencia artificial — incluyendo el desarrollo de agentes LLM y automatizaciones con MCP — complementada con la creación de productos propios que llevan el dato más allá del informe.",
+        "Soy Data Engineer y Analytics Engineer especializado en el ciclo completo del dato: desde la construcción de pipelines y el modelado en Databricks, hasta la definición de métricas y modelos que resuelven retos de negocio reales con SQL, Python y PySpark en entornos cloud de alta demanda.",
+        "Me interesa la convergencia entre ingeniería de datos, analítica avanzada e inteligencia artificial — incluyendo el desarrollo de agentes LLM y automatizaciones con MCP — complementada con la creación de productos propios que llevan el dato más allá del informe.",
       ],
       details: {
         location: { label: "Ubicación:", value: "Barcelona, España" },
@@ -52,23 +52,22 @@ export const translations = {
       ],
       experience: [
         {
-          title: "Digital Analyst",
+          title: "Analytics Engineer",
           place: "Mango",
           date: "Jun 2025 - Actualidad",
           bullets: [
-            "Diseño y despliegue de un framework analítico en Databricks (SQL + PySpark) para estandarizar métricas de disponibilidad online y mejorar la lectura de negocio en ecommerce.",
-            "Construcción de pipelines automatizados desde Azure Databricks hasta Power BI, garantizando trazabilidad end-to-end, calidad del dato y disponibilidad para los equipos de negocio.",
-            "Desarrollo de un modelo de atribución data-driven multicanal para apoyar decisiones comerciales y de marketing.",
-            "Definición de métricas reutilizables y lógica de reporting escalable para asegurar consistencia en los análisis recurrentes.",
+            "Diseño y despliegue en Databricks (SQL + PySpark) de un framework de disponibilidad online que sustituye el stock estático por la disponibilidad percibida por el cliente, incluyendo un KPI específico desarrollado para el equipo de logística.",
+            "Desarrollo de un modelo de atribución multicanal data-driven (Markov chains, First/Last Touch, Linear, Time Decay), auditado y validado por Deloitte, para apoyar decisiones comerciales y de marketing.",
+            "Colaboración con el equipo de Data Engineering: conozco el flujo end-to-end, desde los datos de navegación de GA4 exportados a BigQuery, hasta su ingesta al datalake, modelado en dbt (versionado en Git) y la capa agregada en Snowflake que alimenta los dashboards de Looker.",
           ],
         },
         {
-          title: "Audit Junior",
+          title: "Data Analyst",
           place: "Ernst & Young (EY)",
           date: "Nov 2023 - Ago 2024",
           bullets: [
-            "Procesé y analicé grandes volúmenes de datos financieros de empresas multinacionales para apoyar validaciones y controles de auditoría.",
-            "Desarrollé scripts para automatizar tareas repetitivas de datos, reduciendo el tiempo de procesamiento manual.",
+            "Extracción, limpieza y transformación de datos de clientes multinacionales (SQL, Power Query) y modelado de tablas de hechos/dimensiones para su consumo en Power BI.",
+            "Construcción y mantenimiento de dashboards y KPIs en Power BI (DAX), con reconciliaciones y controles de calidad para garantizar que las cifras coincidieran con las fuentes.",
           ],
         },
       ],
@@ -84,9 +83,9 @@ export const translations = {
           badge: "Full-Stack App",
           title: "GainzTracker",
           description:
-            "App de fitness full-stack con seguimiento de entrenamientos, métricas corporales, fotos de progreso y coaching personalizado por IA.",
+            "App de fitness full-stack con backend propio, base de datos relacional y reports de progreso, además de seguimiento de entrenamientos y coaching personalizado por IA.",
           detailedDescription:
-            "Aplicación completa construida con React 19 (Vite) en el frontend y FastAPI (Python) en el backend, con Supabase como capa de autenticación, base de datos y almacenamiento de fotos. El motor de coaching calcula targets de RPE personalizados, e1RM y clasifica el rendimiento según la fase del usuario (volumen/definición/recomposición). Las rutinas soportan drag-and-drop para reordenamiento, las sesiones persisten entre recargas y la app está desplegada en Vercel con soporte iOS/Android via Capacitor.",
+            "Aplicación completa construida con React 19 (Vite) en el frontend y FastAPI (Python) en el backend, con Supabase (PostgreSQL) como base de datos, autenticación y almacenamiento. Diseñé el modelado de datos, la lógica de servidor y los reports de progreso que consumen los usuarios (métricas corporales, fotos, rendimiento). El motor de coaching calcula targets de RPE personalizados y e1RM a partir del histórico almacenado, clasificando el rendimiento según la fase del usuario (volumen/definición/recomposición). La app corre en producción en Vercel con servidor propio, con soporte iOS/Android via Capacitor.",
         },
         7: {
           badge: "Interno · Databricks",
@@ -104,13 +103,6 @@ export const translations = {
           detailedDescription:
             "Desarrollo de un modelo de atribución multicanal que compara distintas metodologías — First Touch, Last Touch, Linear, Time Decay y cadenas de Markov con cálculo de removal effect — para repartir el crédito de conversión entre canales de marketing de forma más rigurosa que las reglas de atribución tradicionales. El modelo se apoya en la capa de datos ya consolidada en Databricks y alimenta la toma de decisiones comerciales y de inversión en medios. Al ser un desarrollo interno de Mango, no se comparten notebooks ni nombres de tablas internas.",
         },
-        1: {
-          title: "Predicción inmobiliaria (Dubái)",
-          description:
-            "Análisis con Python para detectar zonas de alta rentabilidad utilizando regresión y visualización de métricas específicas.",
-          detailedDescription:
-            "Este proyecto implicó la recolección de datos de listados inmobiliarios en Dubái, limpieza exhaustiva, y el entrenamiento de un modelo de regresión para predecir precios y rentabilidad. Se utilizaron técnicas de visualización para mapear las 'zonas calientes' para inversión.",
-        },
         2: {
           title: "Forecasting de demanda (Cruzber)",
           description:
@@ -126,21 +118,6 @@ export const translations = {
           detailedDescription:
             "Aplicación del algoritmo K-Means para la segmentación de clientes basada en su comportamiento de compra (RFM: Recencia, Frecuencia, Monetario). Se visualizaron los clusters resultantes y se propusieron estrategias de marketing personalizadas para cada segmento, con el fin de aumentar la retención y el valor del cliente.",
         },
-        4: {
-          title: "Dashboard de bienestar",
-          description:
-            "Visualización con Tableau para monitorear la salud organizacional con KPIs de recursos humanos y satisfacción laboral.",
-          detailedDescription:
-            "Creación de un dashboard interactivo en Tableau que integra múltiples fuentes de datos para visualizar KPIs relacionados con la satisfacción de los empleados, rotación y clima laboral, permitiendo la toma de decisiones informadas por parte de RRHH.",
-          downloadLabel: "Dashboard",
-        },
-        5: {
-          title: "Detección Fuga de Empleados",
-          description:
-            "Construcción de un modelo Random Forest para identificar empleados con alto riesgo de renunciar.",
-          detailedDescription:
-            "Este proyecto se centró en el desarrollo de un modelo predictivo para la retención de talento. Se utilizaron datos históricos para entrenar un clasificador Random Forest capaz de identificar patrones asociados con la fuga de empleados, permitiendo a RRHH intervenir proactivamente.",
-        },
         6: {
           title: "Consultas a una Base de Datos (TechZone)",
           description:
@@ -154,10 +131,10 @@ export const translations = {
     skills: {
       heading: "Habilidades técnicas",
       categories: {
-        analyticsEngineering: "Ingeniería Analítica",
-        visualizationBI: "Visualización & BI",
-        machineLearning: "Machine Learning",
-        aiDevelopment: "IA & Desarrollo",
+        analyticsEngineering: "Ingeniería de Datos",
+        cloudWarehousing: "Cloud & Data Warehousing",
+        visualizationBI: "BI & Reporting",
+        machineLearning: "Machine Learning & Forecasting",
       },
     },
     contact: {
@@ -188,9 +165,9 @@ export const translations = {
   },
   en: {
     meta: {
-      title: "Alex Fau | Analytics Engineer & Data Scientist",
+      title: "Alex Fau | Data Engineer & Analytics Engineer",
       description:
-        "Portfolio of Alex Fau: Analytics Engineer and Data Scientist specialized in SQL, Python, PySpark, Databricks, ML models, and full-stack development.",
+        "Portfolio of Alex Fau: Data Engineer and Analytics Engineer specialized in SQL, Python, PySpark, Databricks, dbt, and Snowflake.",
     },
     nav: {
       logo: "My Portfolio",
@@ -203,17 +180,17 @@ export const translations = {
       cvButton: "Download CV",
     },
     hero: {
-      role: "Analytics Engineer & Data Scientist",
+      role: "Data Engineer & Analytics Engineer",
       subtitle:
-        "Building reliable pipelines, models that predict, and products that people use.",
+        "Building reliable data pipelines, metrics that drive business value, and products that people use.",
       ctaPrimary: "View Projects",
       ctaSecondary: "Contact",
     },
     about: {
       heading: "About Me",
       bio: [
-        "I'm an Analytics Engineer and Data Scientist specialized in the full data lifecycle: from building pipelines and modeling in Databricks, to developing predictive models that solve real business challenges with SQL, Python, and PySpark in high-demand cloud environments.",
-        "I'm interested in the convergence of analytics engineering, data science, and artificial intelligence — including LLM agent development and MCP-based automation — complemented by building my own products that take data beyond the report.",
+        "I'm a Data Engineer and Analytics Engineer specialized in the full data lifecycle: from building pipelines and modeling in Databricks, to defining metrics and models that solve real business challenges with SQL, Python, and PySpark in high-demand cloud environments.",
+        "I'm interested in the convergence of data engineering, advanced analytics, and artificial intelligence — including LLM agent development and MCP-based automation — complemented by building my own products that take data beyond the report.",
       ],
       details: {
         location: { label: "Location:", value: "Barcelona, Spain" },
@@ -239,23 +216,22 @@ export const translations = {
       ],
       experience: [
         {
-          title: "Digital Analyst",
+          title: "Analytics Engineer",
           place: "Mango",
           date: "Jun 2025 - Present",
           bullets: [
-            "Designed and deployed an analytical framework in Databricks (SQL + PySpark) to standardize online availability metrics and improve business insight in ecommerce.",
-            "Built automated pipelines from Azure Databricks to Power BI, ensuring end-to-end traceability, data quality, and availability for business teams.",
-            "Developed a data-driven multichannel attribution model to support commercial and marketing decisions.",
-            "Defined reusable metrics and scalable reporting logic to ensure consistency across recurring analyses.",
+            "Designed and deployed an online availability framework in Databricks (SQL + PySpark) replacing static stock metrics with customer-perceived availability, including a dedicated KPI built for the logistics team.",
+            "Built a data-driven multichannel attribution model (Markov chains, First/Last Touch, Linear, Time Decay), audited and validated by Deloitte, to support commercial and marketing decisions.",
+            "Collaborated with the Data Engineering team: I know the end-to-end flow, from GA4 browsing data exported to BigQuery, through ingestion into the datalake, dbt modeling (versioned in Git), and the aggregated layer in Snowflake feeding Looker dashboards.",
           ],
         },
         {
-          title: "Audit Junior",
+          title: "Data Analyst",
           place: "Ernst & Young (EY)",
           date: "Nov 2023 - Aug 2024",
           bullets: [
-            "Processed and analyzed large volumes of financial data from multinational companies to support audit validation and controls.",
-            "Built scripts to automate repetitive data tasks, reducing manual processing time.",
+            "Extracted, cleaned, and transformed data for multinational clients (SQL, Power Query) and modeled fact/dimension tables for consumption in Power BI.",
+            "Built and maintained Power BI dashboards and KPIs (DAX), running reconciliations and quality checks to ensure figures matched source data.",
           ],
         },
       ],
@@ -271,9 +247,9 @@ export const translations = {
           badge: "Full-Stack App",
           title: "GainzTracker",
           description:
-            "Full-stack fitness app with workout tracking, body metrics, progress photos, and personalized AI coaching.",
+            "Full-stack fitness app with a custom backend, relational database, and progress reports, on top of workout tracking and personalized AI coaching.",
           detailedDescription:
-            "Complete application built with React 19 (Vite) on the frontend and FastAPI (Python) on the backend, with Supabase as the authentication, database, and photo storage layer. The coaching engine calculates personalized RPE targets, e1RM, and classifies performance based on the user's phase (volume/cut/recomposition). Routines support drag-and-drop reordering, sessions persist across reloads, and the app is deployed on Vercel with iOS/Android support via Capacitor.",
+            "Complete application built with React 19 (Vite) on the frontend and FastAPI (Python) on the backend, with Supabase (PostgreSQL) as the database, authentication, and storage layer. I designed the data model, server-side logic, and the progress reports users rely on (body metrics, photos, performance). The coaching engine calculates personalized RPE targets and e1RM from stored history, classifying performance based on the user's phase (volume/cut/recomposition). The app runs in production on Vercel with its own backend server, plus iOS/Android support via Capacitor.",
         },
         7: {
           badge: "Internal · Databricks",
@@ -291,13 +267,6 @@ export const translations = {
           detailedDescription:
             "Built a multichannel attribution model comparing several methodologies — First Touch, Last Touch, Linear, Time Decay, and Markov chains with removal-effect calculation — to allocate conversion credit across marketing channels more rigorously than traditional rule-based attribution. The model runs on top of the data layer already consolidated in Databricks and feeds commercial and media-investment decisions. As confidential internal Mango work, no notebooks or internal table names are shared.",
         },
-        1: {
-          title: "Real Estate Prediction (Dubai)",
-          description:
-            "Python analysis to detect high-profitability zones using regression and visualization of specific metrics.",
-          detailedDescription:
-            "This project involved collecting real estate listing data in Dubai, thorough data cleaning, and training a regression model to predict prices and profitability. Visualization techniques were used to map 'hot zones' for investment.",
-        },
         2: {
           title: "Demand Forecasting (Cruzber)",
           description:
@@ -313,21 +282,6 @@ export const translations = {
           detailedDescription:
             "Application of the K-Means algorithm for customer segmentation based on purchasing behavior (RFM: Recency, Frequency, Monetary). The resulting clusters were visualized and personalized marketing strategies were proposed for each segment, aiming to increase retention and customer value.",
         },
-        4: {
-          title: "Wellbeing Dashboard",
-          description:
-            "Tableau visualization to monitor organizational health with HR KPIs and job satisfaction.",
-          detailedDescription:
-            "Creation of an interactive Tableau dashboard integrating multiple data sources to visualize KPIs related to employee satisfaction, turnover, and work climate, enabling informed decision-making by HR.",
-          downloadLabel: "Dashboard",
-        },
-        5: {
-          title: "Employee Churn Detection",
-          description:
-            "Built a Random Forest model to identify employees at high risk of resigning.",
-          detailedDescription:
-            "This project focused on developing a predictive model for talent retention. Historical data was used to train a Random Forest classifier capable of identifying patterns associated with employee churn, allowing HR to intervene proactively.",
-        },
         6: {
           title: "Database Queries (TechZone)",
           description:
@@ -341,10 +295,10 @@ export const translations = {
     skills: {
       heading: "Technical Skills",
       categories: {
-        analyticsEngineering: "Analytics Engineering",
-        visualizationBI: "Visualization & BI",
-        machineLearning: "Machine Learning",
-        aiDevelopment: "AI & Development",
+        analyticsEngineering: "Data Engineering",
+        cloudWarehousing: "Cloud & Data Warehousing",
+        visualizationBI: "BI & Reporting",
+        machineLearning: "Machine Learning & Forecasting",
       },
     },
     contact: {

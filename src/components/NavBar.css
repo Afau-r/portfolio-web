@@ -79,23 +79,35 @@
     to { width: 100%; }
   }
   
-  .lang-toggle {
-    background-color: transparent;
-    color: var(--primary-color);
+  .lang-switch {
+    display: flex;
+    align-items: center;
     border: 2px solid var(--primary-color);
-    padding: 0.6rem 1.2rem;
     border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .lang-option {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    padding: 0.6rem 1rem;
     font-weight: 600;
     font-size: 0.9rem;
     font-family: inherit;
     cursor: pointer;
+    opacity: 0.55;
     transition: all 0.3s ease;
   }
 
-  .lang-toggle:hover {
+  .lang-option:hover {
+    opacity: 1;
+  }
+
+  .lang-option.active {
     background-color: var(--primary-color);
     color: var(--bg-color);
-    transform: translateY(-2px) scale(1.03);
+    opacity: 1;
   }
 
   .cv-button {
@@ -170,8 +182,8 @@
       font-size: 1.1rem;
     }
 
-    .lang-toggle {
-      padding: 0.8rem 1.5rem;
+    .lang-option {
+      padding: 0.8rem 1.2rem;
       font-size: 1.1rem;
     }
   }

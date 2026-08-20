@@ -1,6 +1,6 @@
 # 💼 Portafolio - Alex Fau
 
-¡Bienvenido a mi portafolio como Data Scientist! Aquí muestro algunos de mis proyectos más destacados en ciencia de datos, machine learning, visualización y análisis.
+¡Bienvenido a mi portafolio como Data Engineer! Aquí muestro algunos de mis proyectos más destacados en ciencia de datos, machine learning, visualización y análisis.
 
 ## Tecnologías utilizadas
 

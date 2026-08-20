@@ -28,29 +28,31 @@
   
   .navbar-logo a {
     color: var(--primary-color);
-    font-size: 1.8rem; 
-    font-weight: 700; 
+    font-size: 1.8rem;
+    font-weight: 700;
     text-decoration: none;
+    white-space: nowrap;
     transition: color 0.3s ease;
   }
-  
+
   .navbar-logo a:hover {
     color: #ffffff;
   }
-  
+
   .navbar-links {
     display: flex;
-    gap: 1.8rem; 
+    gap: 1.4rem;
     align-items: center;
   }
-  
+
   .navbar-links a {
     color: var(--text-color); /* Usar variable */
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
+    white-space: nowrap;
     transition: color 0.3s ease;
-    position: relative; 
+    position: relative;
     padding: 0.3rem 0.3rem; /* Pequeño padding para que el subrayado no quede pegado */
   }
   
@@ -91,10 +93,11 @@
     background-color: transparent;
     color: var(--text-color);
     border: none;
-    padding: 0.6rem 1rem;
+    padding: 0.55rem 0.85rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-family: inherit;
+    white-space: nowrap;
     cursor: pointer;
     opacity: 0.55;
     transition: all 0.3s ease;
@@ -113,10 +116,11 @@
   .cv-button {
     background-color: var(--primary-color);
     color: var(--bg-color) !important; /* Usar variable y !important si es necesario */
-    padding: 0.8rem 2rem; 
+    padding: 0.8rem 1.5rem;
     border-radius: 6px; /* Bordes */
-    font-weight: 600; 
+    font-weight: 600;
     font-size: 0.95rem;
+    white-space: nowrap;
     transition: all 0.3s ease;
     display: flex; /* Para alinear icono y texto */
     align-items: center;
@@ -140,7 +144,7 @@
     transform: scale(1.1);
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .navbar-content {
       padding: 0 1.5rem; /* Ajuste para móvil */
     }

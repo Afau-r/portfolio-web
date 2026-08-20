@@ -13,6 +13,14 @@ const projectsMeta = [
     liveDemo: "https://gainztracker-three.vercel.app",
   },
   {
+    id: 1,
+    technologies: ["Python", "DuckDB", "dbt", "Data Quality", "Dimensional Modeling"],
+    image: null,
+    github: "https://github.com/Afau-r/ecommerce-data-platform",
+    liveDemo: null,
+    downloadLink: null,
+  },
+  {
     id: 8,
     technologies: ["Databricks", "SQL", "PySpark", "Marketing Attribution", "Markov Chains"],
     image: null,

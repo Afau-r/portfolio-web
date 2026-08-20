@@ -64,10 +64,10 @@
   width: 108px;
   height: 230px;
   border-radius: 22px;
-  border: 1.5px solid rgba(255,255,255,0.08);
+  border: 1.5px solid var(--line);
   overflow: hidden;
-  background: #0d0d1e;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05);
+  background: #1A1D24;
+  box-shadow: 0 15px 35px rgba(16, 24, 40, 0.22), inset 0 1px 0 rgba(255,255,255,0.05);
   position: relative;
   flex-shrink: 0;
 }
@@ -176,7 +176,7 @@
 }
 
 .project-links a:hover {
-  color: #ffffff;
+  color: var(--ink);
 }
 
 /* --- ESTILOS PARA LA EXPANSIÓN --- */
@@ -208,8 +208,8 @@
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 1.5rem;
-  background-color: #2a2a2c;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
 }
 
 .project-image-expanded {

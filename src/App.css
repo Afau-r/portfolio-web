@@ -1,15 +1,23 @@
 /* src/App.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --primary-color: #00e0ff;
-  --primary-color-rgb: 0, 224, 255;
-  --bg-color: #0e0e10;
-  --card-bg: #1a1a1c;
-  --text-color: #f1f1f1;
-  --text-secondary: #aaaaaa;
-  --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  --navbar-height: 70px; /* Ajusta según la altura real de tu navbar */
+  --primary-color: #2F6FED;
+  --primary-color-rgb: 47, 111, 237;
+  --bg-color: #F7F8FA;
+  --surface: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --ink: #16181D;
+  --text-color: #16181D;
+  --text-secondary: #5B6470;
+  --line: #E4E7EC;
+  --accent-soft: #EAF1FE;
+  --shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-lg: 0 12px 28px rgba(16, 24, 40, 0.10);
+  --navbar-height: 70px;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
 * {
@@ -24,7 +32,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   background-color: var(--bg-color);
   color: var(--text-color);
   overflow-x: hidden;
@@ -50,16 +58,14 @@ body {
 section {
   width: 100%;
   margin: 5rem 0;
-  scroll-margin-top: var(--navbar-height); /* Para compensar la navbar fija */
-  padding-top: 1rem; /* Pequeño padding superior para que el título no quede pegado al nav */
+  scroll-margin-top: var(--navbar-height);
+  padding-top: 1rem;
 }
 
-/* Sección hero */
 .hero {
-  width: 100vw; 
-  max-width: none; 
-  margin-top: 0; 
-  /* padding-top: var(--navbar-height); Si el navbar no es transparente al inicio */
+  width: 100vw;
+  max-width: none;
+  margin-top: 0;
 }
 
 .footer-content {
@@ -69,7 +75,6 @@ section {
   width: 100%;
 }
 
-/* Ajuste para secciones específicas */
 .projects-section, .skills-section, .about-section, .contact-section {
   width: 100%;
   max-width: 900px;
@@ -77,17 +82,25 @@ section {
   margin-right: auto;
 }
 
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
 
 h2 {
-  font-size: 2.2rem;
-  color: var(--primary-color);
+  font-size: 1.9rem;
+  color: var(--ink);
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
   position: relative;
   padding-bottom: 0.75rem;
   font-weight: 700;
+}
+
+h2 svg {
+  color: var(--primary-color);
+  font-size: 0.85em;
 }
 
 h2::after {
@@ -95,14 +108,14 @@ h2::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 70px;
-  height: 4px;
+  width: 44px;
+  height: 3px;
   background-color: var(--primary-color);
   border-radius: 2px;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--text-color);
@@ -115,7 +128,7 @@ a {
 }
 
 a:hover {
-  color: var(--text-color);
+  color: var(--ink);
 }
 
 img {
@@ -125,7 +138,26 @@ img {
 }
 
 button {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
+}
+
+/* Etiqueta técnica reutilizable, estilo consistente con el CV (mono + acento) */
+.eyebrow-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+/* Motivo de grid sutil — firma visual compartida con el CV */
+.grid-motif {
+  position: absolute;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
 }
 
 /* Utilidades para animaciones */
@@ -139,9 +171,8 @@ button {
 
 .fade-in-up {
   animation: fadeInUp 0.8s ease forwards;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
 }
-
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -152,6 +183,7 @@ button {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -168,17 +200,23 @@ button {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Estilos responsivos */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .slide-up, .fade-in-up, .project-card {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
 @media (max-width: 900px) {
   .main-content {
     padding: 1.5rem;
   }
-  
+
   h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -186,14 +224,14 @@ button {
   .main-content {
     padding: 1rem;
   }
-  
+
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
    h3 {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
-  
+
   section {
     margin: 3.5rem 0;
   }

@@ -1,11 +1,12 @@
 /* src/components/Footer.css */
 .footer {
-    background-color: #1a1a1c;
+    background-color: var(--surface);
+    border-top: 1px solid var(--line);
     padding: 2rem 0 1rem;
     position: relative;
     margin-top: 4rem;
   }
-  
+
   .back-to-top {
     position: absolute;
     top: -20px;
@@ -14,21 +15,21 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #00e0ff;
-    color: #0e0e10;
+    background-color: var(--primary-color);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(16, 24, 40, 0.18);
   }
-  
+
   .back-to-top:hover {
-    background-color: #ffffff;
+    background-color: #2258C4;
     transform: translateX(-50%) translateY(-5px);
   }
-  
+
   .footer-content {
     max-width: 900px;
     margin: 0 auto;
@@ -37,79 +38,79 @@
     gap: 2rem;
     padding: 0 2rem;
   }
-  
+
   .footer-tech p {
-    color: #aaaaaa;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
-  
+
   .tech-icons {
     display: flex;
     gap: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-  
+
   .tech-icons svg {
-    color: #00e0ff;
+    color: var(--text-secondary);
     transition: transform 0.3s, color 0.3s;
   }
-  
+
   .tech-icons svg:hover {
     transform: translateY(-3px);
-    color: #ffffff;
+    color: var(--primary-color);
   }
-  
+
   .footer-copyright {
     text-align: center;
   }
-  
+
   .footer-copyright p {
-    color: #aaaaaa;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
-  
+
   .heart-icon {
-    color: #ff5555;
+    color: #E0554F;
     animation: pulse 1.5s infinite;
   }
-  
+
   .footer-nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 0.5rem;
   }
-  
+
   .footer-nav a {
-    color: #aaaaaa;
+    color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: color 0.3s;
   }
-  
+
   .footer-nav a:hover {
-    color: #00e0ff;
+    color: var(--primary-color);
   }
-  
+
   @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
   }
-  
+
   @media (max-width: 768px) {
     .footer-content {
       grid-template-columns: 1fr;
       gap: 1.5rem;
       text-align: center;
     }
-    
+
     .tech-icons {
       justify-content: center;
     }
-    
+
     .footer-nav {
       align-items: center;
     }

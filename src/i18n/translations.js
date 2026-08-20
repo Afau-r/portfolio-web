@@ -56,9 +56,9 @@ export const translations = {
           place: "Mango",
           date: "Jun 2025 - Actualidad",
           bullets: [
-            "Diseño y despliegue en Databricks (SQL + PySpark) de un framework de disponibilidad online que sustituye el stock estático por la disponibilidad percibida por el cliente, incluyendo un KPI específico desarrollado para el equipo de logística.",
-            "Desarrollo de un modelo de atribución multicanal data-driven (Markov chains, First/Last Touch, Linear, Time Decay), auditado y validado por Deloitte, para apoyar decisiones comerciales y de marketing.",
-            "Colaboración con el equipo de Data Engineering: conozco el flujo end-to-end, desde los datos de navegación de GA4 exportados a BigQuery, hasta su ingesta al datalake, modelado en dbt (versionado en Git) y la capa agregada en Snowflake que alimenta los dashboards de Looker.",
+            "Diseño y despliegue en Databricks (SQL + PySpark) de un sistema de disponibilidad online sobre tablas de millones de filas, sustituyendo el stock estático por un KPI de disponibilidad percibida por el cliente desarrollado para el equipo de logística, que mejoró la precisión de la métrica en ~5pp.",
+            "Desarrollo de un pipeline de atribución multicanal data-driven (Markov chains, First/Last Touch, Linear, Time Decay) sobre tablas de millones de filas, auditado y validado por Deloitte, que mejoró la asignación de ingresos en un 2-3% respecto al modelo last-click.",
+            "Colaboración con el equipo de Data Engineering: conozco el flujo end-to-end, desde los datos de navegación de GA4 exportados a BigQuery, hasta su ingesta al datalake, modelado en dbt (versionado en Git), orquestación con Airflow y la capa agregada en Snowflake que alimenta los dashboards de Looker.",
           ],
         },
         {
@@ -86,6 +86,14 @@ export const translations = {
             "App de fitness full-stack con backend propio, base de datos relacional y reports de progreso, además de seguimiento de entrenamientos y coaching personalizado por IA.",
           detailedDescription:
             "Aplicación completa construida con React 19 (Vite) en el frontend y FastAPI (Python) en el backend, con Supabase (PostgreSQL) como base de datos, autenticación y almacenamiento. Diseñé el modelado de datos, la lógica de servidor y los reports de progreso que consumen los usuarios (métricas corporales, fotos, rendimiento). El motor de coaching calcula targets de RPE personalizados y e1RM a partir del histórico almacenado, clasificando el rendimiento según la fase del usuario (volumen/definición/recomposición). La app corre en producción en Vercel con servidor propio, con soporte iOS/Android via Capacitor.",
+        },
+        1: {
+          badge: "Data Pipeline · dbt",
+          title: "Plataforma de Datos E-commerce (Brasil)",
+          description:
+            "Pipeline de datos end-to-end (Python + DuckDB + dbt) sobre el dataset público Olist, con modelado dimensional, tests de calidad y documentación completa.",
+          detailedDescription:
+            "Diseño y construcción de un pipeline de datos completo sobre el dataset público de e-commerce brasileño Olist: ingesta en Python, transformación y modelado dimensional en dbt sobre DuckDB, tests de calidad de datos automatizados y documentación del proyecto pensada para ser replicable en un contexto real de cliente. Es el proyecto público que mejor representa mi forma de trabajar en Data Engineering de extremo a extremo, sin las restricciones de confidencialidad de los proyectos internos de Mango.",
         },
         7: {
           badge: "Interno · Databricks",
@@ -220,9 +228,9 @@ export const translations = {
           place: "Mango",
           date: "Jun 2025 - Present",
           bullets: [
-            "Designed and deployed an online availability framework in Databricks (SQL + PySpark) replacing static stock metrics with customer-perceived availability, including a dedicated KPI built for the logistics team.",
-            "Built a data-driven multichannel attribution model (Markov chains, First/Last Touch, Linear, Time Decay), audited and validated by Deloitte, to support commercial and marketing decisions.",
-            "Collaborated with the Data Engineering team: I know the end-to-end flow, from GA4 browsing data exported to BigQuery, through ingestion into the datalake, dbt modeling (versioned in Git), and the aggregated layer in Snowflake feeding Looker dashboards.",
+            "Designed and deployed on Databricks (SQL + PySpark) an online availability system across tables with millions of rows, replacing static stock with a customer-perceived availability KPI built for the logistics team, improving metric accuracy by ~5pp.",
+            "Developed a data-driven multichannel attribution pipeline (Markov chains, First/Last Touch, Linear, Time Decay) across tables with millions of rows, audited and validated by Deloitte, improving revenue allocation accuracy by 2-3% versus the last-click model.",
+            "Collaborated with the Data Engineering team: I know the end-to-end flow, from GA4 browsing data exported to BigQuery, through ingestion into the datalake, dbt modeling (versioned in Git), Airflow orchestration, and the aggregated layer in Snowflake feeding Looker dashboards.",
           ],
         },
         {
@@ -250,6 +258,14 @@ export const translations = {
             "Full-stack fitness app with a custom backend, relational database, and progress reports, on top of workout tracking and personalized AI coaching.",
           detailedDescription:
             "Complete application built with React 19 (Vite) on the frontend and FastAPI (Python) on the backend, with Supabase (PostgreSQL) as the database, authentication, and storage layer. I designed the data model, server-side logic, and the progress reports users rely on (body metrics, photos, performance). The coaching engine calculates personalized RPE targets and e1RM from stored history, classifying performance based on the user's phase (volume/cut/recomposition). The app runs in production on Vercel with its own backend server, plus iOS/Android support via Capacitor.",
+        },
+        1: {
+          badge: "Data Pipeline · dbt",
+          title: "E-commerce Data Platform (Brazil)",
+          description:
+            "End-to-end data pipeline (Python + DuckDB + dbt) on the public Olist dataset, with dimensional modeling, quality tests, and full documentation.",
+          detailedDescription:
+            "Designed and built a complete data pipeline on the public Brazilian e-commerce dataset Olist: Python-based ingestion, dimensional modeling and transformation in dbt on top of DuckDB, automated data quality tests, and documentation built to be replicable in a real client context. This is the public project that best represents how I work in end-to-end Data Engineering, without the confidentiality constraints of the internal Mango projects.",
         },
         7: {
           badge: "Internal · Databricks",

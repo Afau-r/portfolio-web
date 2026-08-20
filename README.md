@@ -1,6 +1,6 @@
 # 💼 Portafolio - Alex Fau
 
-¡Bienvenido a mi portafolio como Data Engineer! Aquí muestro algunos de mis proyectos más destacados en ciencia de datos, machine learning, visualización y análisis.
+¡Bienvenido a mi portafolio como Data Engineer & Analytics Engineer! Aquí muestro algunos de mis proyectos más destacados en pipelines de datos, modelado analítico, visualización y desarrollo full-stack.
 
 ## Tecnologías utilizadas
 
@@ -13,7 +13,7 @@
 ## Contenido
 
 - Sobre mí
-- Proyectos de ciencia de datos
+- Proyectos de datos e ingeniería analítica
 - Habilidades técnicas
 - Contacto y redes
 

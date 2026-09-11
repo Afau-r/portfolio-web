@@ -29,6 +29,10 @@ service-account*.json
 /attribution_model/
 /stock/
 
+# CV source HTML — working files only, not tracked in the repo
+/cv_es.html
+/cv_en.html
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

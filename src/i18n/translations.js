@@ -3,7 +3,7 @@ export const translations = {
     meta: {
       title: "Alex Fau | Data Engineer",
       description:
-        "Portafolio de Alex Fau: Data Engineer especializado en Microsoft Fabric, Azure, Databricks y Power BI, con foco en arquitecturas de datos gobernadas y aplicación de IA al dato.",
+        "Portafolio de Alex Fau: Data Engineer especializado en entornos Cloud, Databricks y Power BI, con foco en arquitecturas de datos gobernadas y aplicación de IA al dato.",
     },
     nav: {
       logo: "Alex Fau",
@@ -26,8 +26,8 @@ export const translations = {
     about: {
       heading: "Sobre mí",
       bio: [
-        "Soy Data Engineer especializado en el ecosistema Microsoft Fabric y Azure, con experiencia end-to-end en el ciclo del dato: ingesta, modelado dimensional bajo arquitectura Medallion, orquestación con Databricks, PySpark y SQL, y exposición en Power BI. Actualmente construyo la capa Back-End de BI de Moventia, un grupo de movilidad que opera en cinco países.",
-        "Me interesa la convergencia entre ingeniería de datos, gobernanza del dato (Microsoft Purview, calidad y trazabilidad) e inteligencia artificial aplicada — agentes LLM, RAG y automatizaciones con MCP — además de acompañar a otros perfiles junior en su aprendizaje y crear productos propios que llevan el dato más allá del informe.",
+        "Soy Data Engineer especializado en entornos Cloud, con experiencia end-to-end en el ciclo del dato: ingesta, modelado dimensional bajo arquitectura Medallion, orquestación con Databricks, PySpark y SQL, y exposición en Power BI. Actualmente construyo la capa Back-End de BI de Moventia, un grupo de movilidad que opera en cinco países.",
+        "Me atraen los retos y los proyectos innovadores que cumplen un cometido real, no los que se quedan en la teoría. Por eso combino mi trabajo en Moventia con automatizaciones basadas en agentes LLM, RAG y MCP, mentorías a perfiles junior y productos propios que llevan el dato más allá del informe.",
       ],
       details: {
         location: { label: "Ubicación:", value: "Barcelona, España" },
@@ -58,7 +58,7 @@ export const translations = {
           place: "Moventia",
           date: "Sept 2026 - Actualidad",
           bullets: [
-            "Incorporación al equipo de Business Intelligence de Moventia (Movento y Moventis) como perfil Back-End, con el objetivo de extender a Cataluña y Madrid el control de KPIs desarrollado por el equipo de datos de Arabia Saudí, migrando desde Board hacia el ecosistema Microsoft Fabric / Power BI.",
+            "Incorporación al equipo de Business Intelligence de Moventia (Movento y Moventis) como perfil Back-End, con el objetivo de extender a Cataluña y Madrid el control de KPIs implementado en Arabia Saudí, migrando desde Board hacia el ecosistema Microsoft Fabric / Power BI.",
             "Diseño de arquitecturas de datos bajo el enfoque Medallion (Bronze, Silver, Gold) y modelado dimensional en esquema estrella (hechos, dimensiones, SCD) sobre datos de kilometraje, conductores, talleres, calidad, planificación y logística, replicando la base técnica ya validada en Arabia Saudí.",
             "Construcción de pipelines en Microsoft Fabric (Data Factory, Notebooks PySpark, Lakehouse, Warehouse) sobre OneLake, con control de versiones en Git/GitHub y despliegues vía CI/CD.",
             "Colaboración con negocio y BI para orientar el modelo de datos al consumo analítico, dando soporte a Power BI e integrando capacidades de IA (Azure OpenAI, Copilot in Fabric, RAG) cuando aportan valor real.",
@@ -214,7 +214,7 @@ export const translations = {
     meta: {
       title: "Alex Fau | Data Engineer",
       description:
-        "Portfolio of Alex Fau: Data Engineer specialized in Microsoft Fabric, Azure, Databricks and Power BI, focused on governed data architectures and applied AI.",
+        "Portfolio of Alex Fau: Data Engineer specialized in Cloud environments, Databricks and Power BI, focused on governed data architectures and applied AI.",
     },
     nav: {
       logo: "Alex Fau",
@@ -237,8 +237,8 @@ export const translations = {
     about: {
       heading: "About Me",
       bio: [
-        "I'm a Data Engineer specialized in the Microsoft Fabric and Azure ecosystem, with end-to-end experience across the data lifecycle: ingestion, dimensional modeling under the Medallion architecture, orchestration with Databricks, PySpark and SQL, and exposure in Power BI. I'm currently building the BI Back-End layer at Moventia, a mobility group operating across five countries.",
-        "I'm interested in the convergence of data engineering, data governance (Microsoft Purview, quality and traceability) and applied artificial intelligence — LLM agents, RAG and MCP-based automation — alongside mentoring junior profiles and building my own products that take data beyond the report.",
+        "I'm a Data Engineer specialized in Cloud environments, with end-to-end experience across the data lifecycle: ingestion, dimensional modeling under the Medallion architecture, orchestration with Databricks, PySpark and SQL, and exposure in Power BI. I'm currently building the BI Back-End layer at Moventia, a mobility group operating across five countries.",
+        "I'm drawn to challenges and innovative projects that actually accomplish something, not ones that stay theoretical. That's why I pair my work at Moventia with automation built on LLM agents, RAG and MCP, mentoring junior profiles, and building my own products that take data beyond the report.",
       ],
       details: {
         location: { label: "Location:", value: "Barcelona, Spain" },
@@ -269,7 +269,7 @@ export const translations = {
           place: "Moventia",
           date: "Sept 2026 - Present",
           bullets: [
-            "Joined Moventia's Business Intelligence team (Movento and Moventis) as the Back-End profile, tasked with extending to Catalonia and Madrid the KPI control system built by the data team in Saudi Arabia, migrating from Board to the Microsoft Fabric / Power BI ecosystem.",
+            "Joined Moventia's Business Intelligence team (Movento and Moventis) as the Back-End profile, tasked with extending to Catalonia and Madrid the KPI control system implemented in Saudi Arabia, migrating from Board to the Microsoft Fabric / Power BI ecosystem.",
             "Designing data architectures under the Medallion approach (Bronze, Silver, Gold) and dimensional star-schema modeling (facts, dimensions, SCD) over mileage, driver, workshop, quality, planning and logistics data, replicating the technical foundation already proven in Saudi Arabia.",
             "Building pipelines in Microsoft Fabric (Data Factory, PySpark Notebooks, Lakehouse, Warehouse) on top of OneLake, with version control in Git/GitHub and CI/CD deployments.",
             "Collaborating with business and BI teams to keep the data model oriented to analytical consumption, supporting Power BI and integrating AI capabilities (Azure OpenAI, Copilot in Fabric, RAG) when they add real value.",

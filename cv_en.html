@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Fau Ridao — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F8FA;
+    --surface:#FFFFFF;
+    --ink:#16181D;
+    --ink-soft:#5B6470;
+    --line:#E4E7EC;
+    --accent:#2F6FED;
+    --accent-soft:#EAF1FE;
+  }
+  *{box-sizing:border-box;}
+  h1, p, ul{ margin:0; }
+  html{-webkit-font-smoothing:antialiased;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:15px;
+    line-height:1.55;
+  }
+  .page{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 40px 80px;
+  }
+  header.cv-header{
+    position:relative;
+    padding-bottom:28px;
+    margin-bottom:32px;
+    border-bottom:1px solid var(--line);
+  }
+  .grid-motif{
+    position:absolute;
+    top:-24px; right:-40px;
+    width:180px; height:120px;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:18px 18px;
+    opacity:0.6;
+    mask-image:radial-gradient(ellipse at top right, black 30%, transparent 75%);
+    pointer-events:none;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:34px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin:0 0 6px;
+  }
+  .role-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:12px 0 18px;
+  }
+  .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:0.01em;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid #D6E4FD;
+    border-radius:5px;
+    padding:4px 9px;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px 18px;
+    font-size:13.5px;
+    color:var(--ink-soft);
+  }
+  .contact-row a{ color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line); }
+  .contact-row a:hover{ color:var(--accent); border-color:var(--accent); }
+  section{ margin-bottom:30px; }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .profile-text{ color:var(--ink); font-size:15px; }
+  .entry{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:22px;
+    border-left:2px solid var(--line);
+  }
+  .entry:last-child{ margin-bottom:0; }
+  .entry::before{
+    content:"";
+    position:absolute;
+    left:-5px; top:4px;
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--accent);
+  }
+  .entry-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:4px 12px;
+    margin-bottom:4px;
+  }
+  .entry-role{ font-weight:600; font-size:15.5px; }
+  .entry-org{ color:var(--accent); font-weight:500; }
+  .entry-date{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .entry-loc{ font-size:12.5px; color:var(--ink-soft); margin-bottom:8px; }
+  ul.bullets{ margin:8px 0 0; padding-left:18px; }
+  ul.bullets li{ margin-bottom:7px; }
+  ul.bullets li:last-child{ margin-bottom:0; }
+  .proj-title{ font-weight:600; }
+  .proj-link{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--accent);
+    text-decoration:none;
+    margin-left:6px;
+  }
+  .proj-link:hover{ text-decoration:underline; }
+  .skills-list{ display:flex; flex-direction:column; gap:7px; }
+  .skill-line{ font-size:14px; margin:0; line-height:1.6; }
+  .skill-line .skill-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    margin-right:6px;
+  }
+  .edu-item{ margin-bottom:10px; }
+  .edu-item:last-child{ margin-bottom:0; }
+  .edu-title{ font-weight:600; font-size:14.5px; }
+  .edu-meta{ font-size:12.5px; color:var(--ink-soft); }
+  .lang-row{ display:flex; flex-direction:column; gap:8px; font-size:14px; }
+  .lang-row strong{ font-weight:600; }
+  .two-col{ display:flex; gap:0 32px; }
+  .two-col > section{ flex:1 1 0; margin-bottom:0; }
+  @media (max-width:600px){
+    .page{ padding:36px 20px 60px; }
+    h1{ font-size:27px; }
+    .skill-label{ min-width:0; width:100%; }
+    .two-col{ flex-direction:column; gap:24px 0; }
+  }
+  @page{ size:A4; margin:8mm 14mm; }
+  @media print{
+    body{ background:#fff; font-size:8.4pt; line-height:1.34; }
+    .page{ max-width:none; padding:0; margin:0; }
+    .grid-motif{ display:none; }
+    h1{ font-size:18pt; margin:0 0 3pt; }
+    .role-tags{ margin:4pt 0 7pt; gap:4pt; }
+    .tag{ font-size:7.3pt; padding:2.5pt 6pt; border-radius:4pt; }
+    .contact-row{ font-size:7.8pt; gap:1.5pt 9pt; }
+    header.cv-header{ padding-bottom:5pt; margin-bottom:7pt; }
+    section{ margin-bottom:5pt; }
+    .eyebrow{ font-size:7.3pt; margin-bottom:3.5pt; }
+    .profile-text{ font-size:8.4pt; }
+    .entry{ margin-bottom:3pt; padding-left:10pt; page-break-inside:avoid; }
+    .entry-head{ margin-bottom:2pt; }
+    .entry-role{ font-size:9pt; }
+    .entry-date{ font-size:7.6pt; }
+    .entry-loc{ font-size:7.6pt; margin-bottom:1.5pt; }
+    ul.bullets{ margin:1.5pt 0 0; padding-left:12pt; }
+    ul.bullets li{ margin-bottom:1pt; font-size:8.4pt; }
+    .proj-link{ font-size:7.6pt; }
+    .skills-list{ gap:2pt; }
+    .skill-line{ font-size:8.4pt; line-height:1.36; page-break-inside:avoid; }
+    .skill-line .skill-label{ font-size:7.6pt; }
+    .edu-item{ margin-bottom:1.5pt; }
+    .edu-title{ font-size:8.8pt; }
+    .edu-meta{ font-size:7.8pt; }
+    .lang-row{ font-size:9pt; gap:4pt; }
+    .two-col{ gap:0 16pt; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="cv-header">
+    <div class="grid-motif"></div>
+    <h1>Alex Fau Ridao</h1>
+    <div class="role-tags">
+      <span class="tag">DATA ENGINEER</span>
+      <span class="tag">ANALYTICS ENGINEER</span>
+      <span class="tag">SQL · CLOUD · DATABRICKS</span>
+      <span class="tag">PYSPARK · DBT · SNOWFLAKE</span>
+    </div>
+    <div class="contact-row">
+      <span>Sabadell, Barcelona, Spain</span>
+      <a href="mailto:afau2000@gmail.com">afau2000@gmail.com</a>
+      <span>+34 609 872 116</span>
+      <a href="https://afau-r.github.io/portfolio-web/" target="_blank">afau-r.github.io/portfolio-web/</a>
+      <a href="https://linkedin.com/in/alex-fau-ridao" target="_blank">linkedin.com/in/alex-fau-ridao</a>
+    </div>
+  </header>
+
+  <section>
+    <p class="eyebrow">Professional Profile</p>
+    <p class="profile-text">Data Engineer specialized in designing and deploying scalable data pipelines and architectures in Cloud, using Microsoft Fabric, Azure, Databricks, PySpark and SQL as core tools. Experienced across the full data lifecycle — ingestion, transformation, modeling, orchestration, quality and end-to-end traceability — through to consumption in Power BI, with exposure to modern stacks such as dbt and Snowflake, and a focus on building reusable, well-documented data logic, always looking for challenges that involve innovation and real impact.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Professional Experience</p>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Data Engineer</span>
+        <span class="entry-date">Sept 2026 — Present</span>
+      </div>
+      <div class="entry-loc"><span class="entry-org">Moventia</span> · Sant Cugat del Vallès, Spain</div>
+      <ul class="bullets">
+        <li>Part of Moventia's Business Intelligence team (Movento and Moventis) as the Back-End profile, tasked with extending to Catalonia and Madrid the KPI control system implemented in Saudi Arabia, migrating from Board to the Microsoft Fabric / Power BI ecosystem.</li>
+        <li>Designing data architectures under the Medallion approach and star-schema dimensional modeling (facts, dimensions, SCD) over mileage, driver, workshop, quality, planning and logistics data, replicating the technical foundation already proven in Saudi Arabia with pipelines in Microsoft Fabric (Data Factory, PySpark Notebooks, Lakehouse, Warehouse) on top of OneLake.</li>
+        <li>Working closely with business and BI teams to keep the data model oriented to analytical consumption, supporting Power BI and integrating AI (Azure OpenAI, Copilot in Fabric, RAG) where it adds real value.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Analytics Engineer</span>
+        <span class="entry-date">Jun 2025 — Aug 2026</span>
+      </div>
+      <div class="entry-loc"><span class="entry-org">Mango</span> · Barcelona, Spain</div>
+      <ul class="bullets">
+        <li>Designed and deployed on Databricks (SQL + PySpark) an online availability system across tables with millions of rows, replacing static stock with a customer-perceived availability KPI built for the logistics team, improving metric accuracy by ~5pp.</li>
+        <li>Developed a data-driven multi-channel attribution pipeline (Markov chains, First/Last Touch, Linear, Time Decay) across tables with millions of rows, audited and validated by Deloitte, improving revenue allocation accuracy by 2-3% versus the last-click model.</li>
+        <li>Collaborated with the Data Engineering team on the end-to-end flow: GA4 navigation data exported to BigQuery, ingestion into the datalake, dbt modeling (Git-versioned), orchestration with Airflow, and an aggregated Snowflake layer feeding Looker dashboards.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-role">Audit Data Analytics</span>
+        <span class="entry-date">Nov 2023 — Aug 2024</span>
+      </div>
+      <div class="entry-loc"><span class="entry-org">Ernst & Young (EY)</span> · Barcelona, Spain</div>
+      <ul class="bullets">
+        <li>Extracted, cleaned and transformed data for multinational clients (SQL, Power Query) and modeled fact/dimension tables for consumption in Power BI.</li>
+        <li>Built and maintained dashboards and KPIs in Power BI (DAX), running reconciliations and quality controls to ensure figures matched source data.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Data Projects</p>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span><span class="entry-role">GainzTracker — Full-Stack Fitness App</span><a class="proj-link" href="https://gainztracker-three.vercel.app/" target="_blank">gainztracker-three.vercel.app</a></span>
+      </div>
+      <ul class="bullets">
+        <li>Designed and deployed the backend and database (FastAPI + Supabase/PostgreSQL), handling data modeling, server logic and progress report generation for users.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span><span class="entry-role">E-commerce Data Platform (Brazil)</span><a class="proj-link" href="https://github.com/Afau-r/ecommerce-data-platform" target="_blank">github.com/Afau-r/ecommerce-data-platform</a></span>
+      </div>
+      <ul class="bullets">
+        <li>End-to-end design of a data pipeline (Python + DuckDB + dbt) on the public Olist dataset, including dimensional modeling, quality tests and full documentation, built with support from LLM agents (Claude Code) to accelerate the development iteration.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <p class="eyebrow">Technical Skills</p>
+    <div class="skills-list">
+      <p class="skill-line"><span class="skill-label">Platforms & Cloud</span>Azure, Microsoft Fabric (Lakehouse, Data Factory, Notebooks, Warehouse, OneLake), Databricks, Snowflake, BigQuery, Git/GitHub.</p>
+      <p class="skill-line"><span class="skill-label">Data Engineering</span>PySpark/Spark, advanced SQL, dbt, Medallion architecture (Bronze/Silver/Gold), star-schema dimensional modeling (facts, dimensions, SCD), ETL/ELT, end-to-end quality and traceability.</p>
+      <p class="skill-line"><span class="skill-label">Governance & DevOps</span>Microsoft Purview, CI/CD, Airflow, Docker/Kubernetes, GDPR.</p>
+      <p class="skill-line"><span class="skill-label">BI & Reporting</span>Power BI (DAX, semantic models), Tableau, Looker, Google Analytics 4.</p>
+      <p class="skill-line"><span class="skill-label">Applied AI</span>Azure OpenAI, Copilot in Fabric, RAG, LLM agents (Claude Code) and automation.</p>
+      <p class="skill-line"><span class="skill-label">Python Libraries</span>Pandas, NumPy, Scikit-learn, Statsmodels, MLForecast, Matplotlib, Seaborn.</p>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <section style="margin-bottom:0;">
+      <p class="eyebrow">Education</p>
+      <div class="edu-item">
+        <div class="edu-title">Master's in Data Analysis and Artificial Intelligence</div>
+        <div class="edu-meta">ISDI Digital Group · 2024 – 2025</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-title">BA in Economics, minor in Statistics and Econometrics</div>
+        <div class="edu-meta">Universitat Autònoma de Barcelona · 2019 – 2023</div>
+      </div>
+    </section>
+
+    <section style="margin-bottom:0;">
+      <p class="eyebrow">Languages</p>
+      <div class="lang-row">
+        <span><strong>Catalan</strong> — Native</span>
+        <span><strong>Spanish</strong> — Native</span>
+        <span><strong>English</strong> — B2 (Upper Intermediate)</span>
+      </div>
+    </section>
+  </div>
+
+</div>
+</body>
+</html>

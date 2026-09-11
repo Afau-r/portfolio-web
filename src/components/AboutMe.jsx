@@ -34,6 +34,10 @@ const AboutMe = () => {
               <strong>{about.details.languages.label}</strong>
               <span>{about.details.languages.value}</span>
             </div>
+            <div className="profile-detail-item">
+              <strong>{about.details.interests.label}</strong>
+              <span>{about.details.interests.value}</span>
+            </div>
           </div>
         </div>
       </div>

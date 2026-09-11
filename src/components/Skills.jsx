@@ -1,6 +1,6 @@
 // src/components/Skills.jsx
 import React from "react";
-import { FaTools, FaDatabase, FaChartBar, FaBrain, FaCloud } from "react-icons/fa";
+import { FaTools, FaDatabase, FaChartBar, FaBrain, FaCloud, FaShieldAlt, FaRobot } from "react-icons/fa";
 import { useLanguage } from "../i18n/LanguageContext";
 import "./Skills.css";
 
@@ -9,24 +9,34 @@ const Skills = () => {
 
   const skillGroups = [
     {
-      category: t.skills.categories.analyticsEngineering,
-      icon: <FaDatabase />,
-      skills: ["SQL", "Python", "PySpark", "Azure Databricks"],
+      category: t.skills.categories.cloudPlatforms,
+      icon: <FaCloud />,
+      skills: ["Azure", "Microsoft Fabric", "Lakehouse & OneLake", "Data Factory", "Azure Databricks"],
     },
     {
-      category: t.skills.categories.cloudWarehousing,
-      icon: <FaCloud />,
-      skills: ["Azure", "Snowflake", "BigQuery", "dbt"],
+      category: t.skills.categories.dataEngineering,
+      icon: <FaDatabase />,
+      skills: ["Advanced SQL", "PySpark", "dbt", "Medallion architecture", "Star-schema modeling"],
+    },
+    {
+      category: t.skills.categories.governance,
+      icon: <FaShieldAlt />,
+      skills: ["Microsoft Purview", "Git / GitHub", "CI/CD", "GDPR"],
     },
     {
       category: t.skills.categories.visualizationBI,
       icon: <FaChartBar />,
-      skills: ["Power BI", "Tableau", "Looker", "Google Analytics 4"],
+      skills: ["Power BI (DAX)", "Tableau", "Looker", "Google Analytics 4"],
+    },
+    {
+      category: t.skills.categories.appliedAI,
+      icon: <FaRobot />,
+      skills: ["Azure OpenAI", "Copilot in Fabric", "RAG", "Claude Code"],
     },
     {
       category: t.skills.categories.machineLearning,
       icon: <FaBrain />,
-      skills: ["Scikit-learn", "Clustering & RFM", "Time Series Forecasting", "Random Forest"],
+      skills: ["Scikit-learn", "Clustering & RFM", "Time-series forecasting", "Random Forest"],
     },
   ];
 

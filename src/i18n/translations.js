@@ -1,37 +1,39 @@
 export const translations = {
   es: {
     meta: {
-      title: "Alex Fau | Data Engineer & Analytics Engineer",
+      title: "Alex Fau | Data Engineer",
       description:
-        "Portafolio de Alex Fau: Data Engineer y Analytics Engineer especializado en SQL, Python, PySpark, Databricks, dbt y Snowflake.",
+        "Portafolio de Alex Fau: Data Engineer especializado en Microsoft Fabric, Azure, Databricks y Power BI, con foco en arquitecturas de datos gobernadas y aplicación de IA al dato.",
     },
     nav: {
-      logo: "Mi Portfolio",
+      logo: "Alex Fau",
       links: {
         about: "Sobre mí",
         projects: "Proyectos",
-        skills: "Habilidades",
+        skills: "Stack",
+        services: "Servicios",
         contact: "Contacto",
       },
       cvButton: "Descargar CV",
     },
     hero: {
-      role: "Data Engineer & Analytics Engineer",
+      role: "Data Engineer",
       subtitle:
-        "Construyendo pipelines de datos fiables, métricas que aportan valor de negocio y productos que se usan.",
+        "Diseño arquitecturas de datos en Azure y Microsoft Fabric, y construyo pipelines que convierten datos en decisiones de negocio.",
       ctaPrimary: "Ver proyectos",
       ctaSecondary: "Contacto",
     },
     about: {
       heading: "Sobre mí",
       bio: [
-        "Soy Data Engineer y Analytics Engineer especializado en el ciclo completo del dato: desde la construcción de pipelines y el modelado en Databricks, hasta la definición de métricas y modelos que resuelven retos de negocio reales con SQL, Python y PySpark en entornos cloud de alta demanda.",
-        "Me interesa la convergencia entre ingeniería de datos, analítica avanzada e inteligencia artificial — incluyendo el desarrollo de agentes LLM y automatizaciones con MCP — complementada con la creación de productos propios que llevan el dato más allá del informe.",
+        "Soy Data Engineer especializado en el ecosistema Microsoft Fabric y Azure, con experiencia end-to-end en el ciclo del dato: ingesta, modelado dimensional bajo arquitectura Medallion, orquestación con Databricks, PySpark y SQL, y exposición en Power BI. Actualmente construyo la capa Back-End de BI de Moventia, un grupo de movilidad que opera en cinco países.",
+        "Me interesa la convergencia entre ingeniería de datos, gobernanza del dato (Microsoft Purview, calidad y trazabilidad) e inteligencia artificial aplicada — agentes LLM, RAG y automatizaciones con MCP — además de acompañar a otros perfiles junior en su aprendizaje y crear productos propios que llevan el dato más allá del informe.",
       ],
       details: {
         location: { label: "Ubicación:", value: "Barcelona, España" },
-        education: { label: "Educación:", value: "Máster en Data Analytics & AI" },
+        education: { label: "Educación:", value: "Máster en Data Analytics & IA" },
         languages: { label: "Idiomas:", value: "Español, Catalán, Inglés" },
+        interests: { label: "Intereses:", value: "IA aplicada al dato, automatización, mentoría" },
       },
       educationHeading: "Educación",
       experienceHeading: "Experiencia",
@@ -52,9 +54,20 @@ export const translations = {
       ],
       experience: [
         {
+          title: "Data Engineer",
+          place: "Moventia",
+          date: "Sept 2026 - Actualidad",
+          bullets: [
+            "Incorporación al equipo de Business Intelligence de Moventia (Movento y Moventis) como perfil Back-End, con el objetivo de extender a Cataluña y Madrid el control de KPIs desarrollado por el equipo de datos de Arabia Saudí, migrando desde Board hacia el ecosistema Microsoft Fabric / Power BI.",
+            "Diseño de arquitecturas de datos bajo el enfoque Medallion (Bronze, Silver, Gold) y modelado dimensional en esquema estrella (hechos, dimensiones, SCD) sobre datos de kilometraje, conductores, talleres, calidad, planificación y logística, replicando la base técnica ya validada en Arabia Saudí.",
+            "Construcción de pipelines en Microsoft Fabric (Data Factory, Notebooks PySpark, Lakehouse, Warehouse) sobre OneLake, con control de versiones en Git/GitHub y despliegues vía CI/CD.",
+            "Colaboración con negocio y BI para orientar el modelo de datos al consumo analítico, dando soporte a Power BI e integrando capacidades de IA (Azure OpenAI, Copilot in Fabric, RAG) cuando aportan valor real.",
+          ],
+        },
+        {
           title: "Analytics Engineer",
           place: "Mango",
-          date: "Jun 2025 - Actualidad",
+          date: "Jun 2025 - Ago 2026",
           bullets: [
             "Diseño y despliegue en Databricks (SQL + PySpark) de un sistema de disponibilidad online sobre tablas de millones de filas, sustituyendo el stock estático por un KPI de disponibilidad percibida por el cliente desarrollado para el equipo de logística, que mejoró la precisión de la métrica en ~5pp.",
             "Desarrollo de un pipeline de atribución multicanal data-driven (Markov chains, First/Last Touch, Linear, Time Decay) sobre tablas de millones de filas, auditado y validado por Deloitte, que mejoró la asignación de ingresos en un 2-3% respecto al modelo last-click.",
@@ -137,13 +150,38 @@ export const translations = {
       },
     },
     skills: {
-      heading: "Habilidades técnicas",
+      heading: "Stack técnico",
       categories: {
-        analyticsEngineering: "Ingeniería de Datos",
-        cloudWarehousing: "Cloud & Data Warehousing",
+        cloudPlatforms: "Microsoft Fabric & Azure",
+        dataEngineering: "Ingeniería de Datos",
+        governance: "Gobernanza & DevOps",
         visualizationBI: "BI & Reporting",
-        machineLearning: "Machine Learning & Forecasting",
+        appliedAI: "IA aplicada al dato",
+        machineLearning: "Data Science & Forecasting",
       },
+    },
+    services: {
+      heading: "Servicios",
+      intro:
+        "Además de mi rol en Moventia, colaboro puntualmente en proyectos externos de datos, formación e IA aplicada.",
+      items: [
+        {
+          title: "Consultoría freelance de datos",
+          description:
+            "Diseño de arquitecturas de datos, pipelines ETL/ELT y modelado dimensional para proyectos puntuales, desde la ingesta hasta la capa de consumo analítico en BI.",
+        },
+        {
+          title: "Mentoría y formación",
+          description:
+            "Acompañamiento a perfiles junior en SQL, Python, PySpark y Power BI, y sesiones de formación práctica orientadas a proyectos reales.",
+        },
+        {
+          title: "IA aplicada, prompting y automatización",
+          description:
+            "Agentes LLM, automatizaciones con MCP y desarrollo de herramientas a medida que conectan datos, IA y producto.",
+        },
+      ],
+      cta: "Contacto",
     },
     contact: {
       heading: "Contacto",
@@ -166,44 +204,47 @@ export const translations = {
       navLinks: {
         about: "Sobre mí",
         projects: "Proyectos",
-        skills: "Habilidades",
+        skills: "Stack",
+        services: "Servicios",
         contact: "Contacto",
       },
     },
   },
   en: {
     meta: {
-      title: "Alex Fau | Data Engineer & Analytics Engineer",
+      title: "Alex Fau | Data Engineer",
       description:
-        "Portfolio of Alex Fau: Data Engineer and Analytics Engineer specialized in SQL, Python, PySpark, Databricks, dbt, and Snowflake.",
+        "Portfolio of Alex Fau: Data Engineer specialized in Microsoft Fabric, Azure, Databricks and Power BI, focused on governed data architectures and applied AI.",
     },
     nav: {
-      logo: "My Portfolio",
+      logo: "Alex Fau",
       links: {
         about: "About Me",
         projects: "Projects",
-        skills: "Skills",
+        skills: "Stack",
+        services: "Services",
         contact: "Contact",
       },
       cvButton: "Download CV",
     },
     hero: {
-      role: "Data Engineer & Analytics Engineer",
+      role: "Data Engineer",
       subtitle:
-        "Building reliable data pipelines, metrics that drive business value, and products that people use.",
+        "Designing data architectures on Azure and Microsoft Fabric, and building pipelines that turn data into business decisions.",
       ctaPrimary: "View Projects",
       ctaSecondary: "Contact",
     },
     about: {
       heading: "About Me",
       bio: [
-        "I'm a Data Engineer and Analytics Engineer specialized in the full data lifecycle: from building pipelines and modeling in Databricks, to defining metrics and models that solve real business challenges with SQL, Python, and PySpark in high-demand cloud environments.",
-        "I'm interested in the convergence of data engineering, advanced analytics, and artificial intelligence — including LLM agent development and MCP-based automation — complemented by building my own products that take data beyond the report.",
+        "I'm a Data Engineer specialized in the Microsoft Fabric and Azure ecosystem, with end-to-end experience across the data lifecycle: ingestion, dimensional modeling under the Medallion architecture, orchestration with Databricks, PySpark and SQL, and exposure in Power BI. I'm currently building the BI Back-End layer at Moventia, a mobility group operating across five countries.",
+        "I'm interested in the convergence of data engineering, data governance (Microsoft Purview, quality and traceability) and applied artificial intelligence — LLM agents, RAG and MCP-based automation — alongside mentoring junior profiles and building my own products that take data beyond the report.",
       ],
       details: {
         location: { label: "Location:", value: "Barcelona, Spain" },
         education: { label: "Education:", value: "Master's in Data Analytics & AI" },
         languages: { label: "Languages:", value: "Spanish, Catalan, English" },
+        interests: { label: "Interests:", value: "Applied AI, automation, mentoring" },
       },
       educationHeading: "Education",
       experienceHeading: "Experience",
@@ -224,9 +265,20 @@ export const translations = {
       ],
       experience: [
         {
+          title: "Data Engineer",
+          place: "Moventia",
+          date: "Sept 2026 - Present",
+          bullets: [
+            "Joined Moventia's Business Intelligence team (Movento and Moventis) as the Back-End profile, tasked with extending to Catalonia and Madrid the KPI control system built by the data team in Saudi Arabia, migrating from Board to the Microsoft Fabric / Power BI ecosystem.",
+            "Designing data architectures under the Medallion approach (Bronze, Silver, Gold) and dimensional star-schema modeling (facts, dimensions, SCD) over mileage, driver, workshop, quality, planning and logistics data, replicating the technical foundation already proven in Saudi Arabia.",
+            "Building pipelines in Microsoft Fabric (Data Factory, PySpark Notebooks, Lakehouse, Warehouse) on top of OneLake, with version control in Git/GitHub and CI/CD deployments.",
+            "Collaborating with business and BI teams to keep the data model oriented to analytical consumption, supporting Power BI and integrating AI capabilities (Azure OpenAI, Copilot in Fabric, RAG) when they add real value.",
+          ],
+        },
+        {
           title: "Analytics Engineer",
           place: "Mango",
-          date: "Jun 2025 - Present",
+          date: "Jun 2025 - Aug 2026",
           bullets: [
             "Designed and deployed on Databricks (SQL + PySpark) an online availability system across tables with millions of rows, replacing static stock with a customer-perceived availability KPI built for the logistics team, improving metric accuracy by ~5pp.",
             "Developed a data-driven multichannel attribution pipeline (Markov chains, First/Last Touch, Linear, Time Decay) across tables with millions of rows, audited and validated by Deloitte, improving revenue allocation accuracy by 2-3% versus the last-click model.",
@@ -309,13 +361,38 @@ export const translations = {
       },
     },
     skills: {
-      heading: "Technical Skills",
+      heading: "Technical Stack",
       categories: {
-        analyticsEngineering: "Data Engineering",
-        cloudWarehousing: "Cloud & Data Warehousing",
+        cloudPlatforms: "Microsoft Fabric & Azure",
+        dataEngineering: "Data Engineering",
+        governance: "Governance & DevOps",
         visualizationBI: "BI & Reporting",
-        machineLearning: "Machine Learning & Forecasting",
+        appliedAI: "Applied AI",
+        machineLearning: "Data Science & Forecasting",
       },
+    },
+    services: {
+      heading: "Services",
+      intro:
+        "Alongside my role at Moventia, I take on select external projects in data, training and applied AI.",
+      items: [
+        {
+          title: "Freelance data consulting",
+          description:
+            "Data architecture design, ETL/ELT pipelines and dimensional modeling for standalone projects, from ingestion through to the BI consumption layer.",
+        },
+        {
+          title: "Mentoring & training",
+          description:
+            "Mentoring junior profiles in SQL, Python, PySpark and Power BI, plus hands-on training sessions built around real projects.",
+        },
+        {
+          title: "Applied AI, prompting & automation",
+          description:
+            "LLM agents, MCP-based automation, and custom tooling that connects data, AI and product.",
+        },
+      ],
+      cta: "Contact",
     },
     contact: {
       heading: "Contact",
@@ -338,7 +415,8 @@ export const translations = {
       navLinks: {
         about: "About Me",
         projects: "Projects",
-        skills: "Skills",
+        skills: "Stack",
+        services: "Services",
         contact: "Contact",
       },
     },

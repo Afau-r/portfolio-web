@@ -75,7 +75,7 @@ section {
   width: 100%;
 }
 
-.projects-section, .skills-section, .about-section, .contact-section {
+.projects-section, .skills-section, .services-section, .about-section, .contact-section {
   width: 100%;
   max-width: 900px;
   margin-left: auto;

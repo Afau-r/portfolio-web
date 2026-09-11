@@ -65,6 +65,7 @@ const NavBar = () => {
     { id: "about", text: t.nav.links.about },
     { id: "projects", text: t.nav.links.projects },
     { id: "skills", text: t.nav.links.skills },
+    { id: "services", text: t.nav.links.services },
     { id: "contact", text: t.nav.links.contact },
   ];
 

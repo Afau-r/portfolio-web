@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-role-tags">
           <span className="hero-tag">DATA ENGINEER</span>
-          <span className="hero-tag">ANALYTICS ENGINEER</span>
+          <span className="hero-tag">AZURE &middot; MICROSOFT FABRIC</span>
         </div>
         <h1 className="hero-title">
           <span className="hero-name">Alex Fau Ridao</span>

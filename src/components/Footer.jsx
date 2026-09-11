@@ -39,6 +39,7 @@ const Footer = () => {
           <a href="#about">{t.footer.navLinks.about}</a>
           <a href="#projects">{t.footer.navLinks.projects}</a>
           <a href="#skills">{t.footer.navLinks.skills}</a>
+          <a href="#services">{t.footer.navLinks.services}</a>
           <a href="#contact">{t.footer.navLinks.contact}</a>
         </div>
       </div>
